@@ -2,17 +2,17 @@
 
 Aspiring **Cloud & Cybersecurity Professional** with hands-on experience designing, securing, monitoring, and automating Microsoft-based cloud environments.
 
-I focus on **practical security operations**, including identity protection, endpoint security, centralized logging, threat detection, and automated incident response.  
-My projects are built to reflect **real-world enterprise and SOC workflows**, not just isolated lab configurations.
+I specialize in **practical security operations**—from identity protection and endpoint security to centralized logging, threat detection, and automated incident response.  
+My projects are intentionally built to reflect **real-world enterprise and SOC workflows**, emphasizing clarity, security best practices, and operational thinking rather than isolated lab tasks.
 
 ---
 
 ## Professional Focus
 - Cloud Security & Security Operations (SOC)
-- Identity-first and Zero Trust security design
+- Identity-first and Zero Trust security architecture
 - Endpoint, email, and SaaS protection
 - SIEM, SOAR, and security automation
-- Infrastructure as Code (IaC)
+- Infrastructure as Code (IaC) and repeatable deployments
 
 ---
 
@@ -22,7 +22,7 @@ My projects are built to reflect **real-world enterprise and SOC workflows**, no
 - Microsoft Azure
 - Microsoft Entra ID (Azure AD)
 - Conditional Access & Zero Trust
-- Identity governance & MFA
+- Identity governance, MFA, and role-based access control
 
 ### Endpoint & Device Security
 - Microsoft Intune (Windows, Android)
@@ -35,11 +35,11 @@ My projects are built to reflect **real-world enterprise and SOC workflows**, no
 - Microsoft Defender for Office 365
 - Microsoft Defender for Cloud Apps (CASB)
 - Microsoft Sentinel (SIEM & SOAR)
-- KQL (Kusto Query Language)
+- KQL (Kusto Query Language) for detection and investigation
 
 ### Automation & Infrastructure
 - Terraform (Infrastructure as Code)
-- GitHub + Terraform Cloud
+- GitHub & version-controlled deployments
 - Logic Apps & Azure Automation Runbooks
 - Cloudflare DNS & Zero Trust fundamentals
 
@@ -47,22 +47,23 @@ My projects are built to reflect **real-world enterprise and SOC workflows**, no
 
 ## Featured Project
 
-### 🛡️ Cloud-Centric Security Lab with SOC Integration
-A comprehensive, end-to-end security lab simulating how modern organizations design and operate a **Security Operations Center (SOC)**.
+### 🛡️ Zero-to-Hero Cloud Security SOC Lab
+A comprehensive, end-to-end security lab that simulates how modern organizations design, secure, and operate a **cloud-centric Security Operations Center (SOC)**.
 
 **What this project demonstrates:**
 - Secure Microsoft 365 tenant and identity foundation
-- Endpoint and mobile device protection using Intune and Defender
+- Identity-first access controls using Conditional Access and MFA
+- Endpoint and mobile device protection with Intune and Defender
 - Centralized logging and visibility using Microsoft Sentinel
-- Detection of real-world RDP brute-force attacks
+- Detection and investigation of real-world RDP brute-force attacks
 - GeoIP enrichment and attack visualization
-- Automated incident response using SOAR (Logic Apps + Runbooks)
-- Infrastructure deployment using Terraform (IaC)
+- Automated incident response using SOAR (Logic Apps & Runbooks)
+- Infrastructure provisioning using Terraform (IaC)
 
 📌 **Technologies Used:**  
 Azure · Microsoft 365 · Entra ID · Intune · Defender XDR · Sentinel · Terraform · Cloudflare
 
-👉 *See the full project documentation in this repository.*
+👉 *Full step-by-step documentation and evidence are available within this repository.*
 
 ---
 
@@ -74,9 +75,9 @@ Azure · Microsoft 365 · Entra ID · Intune · Defender XDR · Sentinel · Terr
 ---
 
 ## Career Objective
-Seeking **SOC Analyst**, **Cloud Security**, or **Junior Security Engineer** roles where I can apply my hands-on experience, continue learning, and contribute to securing modern cloud environments.
+Seeking **SOC Analyst**, **Cloud Security**, or **Junior Security Engineer** roles where I can apply my hands-on experience, continue developing my technical depth, and contribute to securing modern cloud environments.
 
 ---
 
 ## Contact
-📧 **Email:** kiranjoshy555@gmail.com  
+📧 **Email:** kiranjoshy555@gmail.com
