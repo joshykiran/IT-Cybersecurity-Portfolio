@@ -331,7 +331,7 @@ I used a DevOps-style workflow (**GitHub + Terraform Cloud**) to keep the deploy
 - SIEM deployment
 - GitHub + Terraform Cloud integration
 
-![Screenshot 106](./evidence/Screenshot%20(106)%20-%20Copy.jpg)
+![Security configuration screenshot](./evidence/S106%20-%20Copy.png)
 ![Screenshot 110](./evidence/Screenshot%20(110)%20-%20Copy.jpg)
 ![Screenshot 113](./evidence/Screenshot%20(113)%20-%20Copy.jpg)
 ![Screenshot 118](./evidence/Screenshot%20(118)%20-%20Copy.jpg)
