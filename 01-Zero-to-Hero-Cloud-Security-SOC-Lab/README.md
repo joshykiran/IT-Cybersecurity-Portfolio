@@ -157,7 +157,7 @@ Secured endpoints from first boot using Intune and Autopilot.
 - Windows Autopilot
 
 ![Cloudflare nameserver update confirmation](./evidence/Screenshot%20(56)%20-%20Copy.jpg)
-![Cloudflare DNS overview](./evidence/Screenshot92.png)
+![Security configuration overview](./evidence/Screenshot%20(92).png)
 
 ---
 
