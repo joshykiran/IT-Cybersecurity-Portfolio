@@ -119,10 +119,11 @@ Enabled enterprise security capabilities through proper licensing.
 
 ### 🛠️ What I Did
 Activated trial licenses:
-- EMS E5  
+- Microsoft 365 E5  
 - Defender for Endpoint P2  
 - Defender for Office 365 P2  
-- Microsoft 365 Business Premium  
+- Microsoft 365 Business Premium
+- Windows 365 enterprise
 
 ### 📚 What I Learned
 - Licensing directly impacts security posture
