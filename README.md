@@ -1,4 +1,4 @@
-# Kiran Joshy — IT & Cloud Security Portfolio
+# Kiran Joshy — IT & Cyber Security Portfolio
 
 Aspiring **Cloud & Cybersecurity Professional** with hands-on experience designing, securing, monitoring, and automating Microsoft-based cloud environments.
 
