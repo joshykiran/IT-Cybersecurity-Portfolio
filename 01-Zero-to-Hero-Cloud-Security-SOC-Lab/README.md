@@ -1,45 +1,58 @@
-# Project 01 — Cloud-Centric Security Lab with SOC Integration
+# 📘 Project 01 — Cloud-Centric Security Lab with SOC Integration
+
+---
 
 ## Project Overview
-This project documents my hands-on experience designing, building, securing, monitoring, and automating a **cloud-centric enterprise environment** using Microsoft security technologies and Infrastructure as Code.
 
-The lab was intentionally designed to mirror how **real organizations operate a Security Operations Center (SOC)** — focusing on **identity-first security**, **endpoint protection**, **centralized visibility**, **threat detection**, and **automated response**.
+This project documents my **hands-on experience designing, securing, monitoring, and automating a cloud-centric enterprise environment** using Microsoft security technologies and Infrastructure as Code (IaC).
 
-Rather than listing configurations alone, this project emphasizes:
+The lab was intentionally designed to mirror how **real-world organizations operate a Security Operations Center (SOC)**, with a strong emphasis on:
+
+- Identity-first and Zero Trust security
+- Endpoint, email, and SaaS protection
+- Centralized logging and visibility
+- Threat detection and investigation
+- Automated incident response (SOAR)
+
+Rather than listing configurations alone, this project focuses on:
+
 - **Why** each security control exists  
 - **How** Microsoft security services integrate end-to-end  
 - **How** attacks are detected, enriched, visualized, and automatically contained  
 
-This reflects structured learning, deliberate design decisions, and real operational thinking aligned with **cloud security and SOC roles**.
+This reflects structured learning, deliberate design decisions, and operational thinking aligned with **SOC Analyst, Cloud Security, and Junior Security Engineer roles**.
 
 ---
 
 ## Key Outcomes
-- Deployed Microsoft Sentinel and Log Analytics using **Terraform (IaC)**  
-- Centralized identity, endpoint, email, and cloud telemetry  
-- Detected real-world RDP brute-force attacks (Event ID 4625)  
-- Enriched logs with **GeoIP intelligence** and visualized attack origins  
-- Automated containment using **SOAR (Logic Apps + Automation Runbooks)**  
+
+- Deployed Microsoft Sentinel and Log Analytics using **Terraform (IaC)**
+- Centralized identity, endpoint, email, and cloud telemetry
+- Detected real-world **RDP brute-force attacks** (Event ID 4625)
+- Enriched logs with **GeoIP intelligence** and visualized attacker locations
+- Automated incident containment using **SOAR (Logic Apps + Runbooks)**
 
 ---
 
 ## Technologies Used
+
 - **Cloud Platform:** Microsoft Azure  
 - **Identity & Access Management:** Microsoft Entra ID (Azure AD)  
 - **Device Management:** Microsoft Intune (Windows & Android)  
-- **Endpoint & Email Security:** Microsoft Defender Suite  
+- **Threat Protection:** Microsoft Defender Suite  
 - **SIEM / SOAR:** Microsoft Sentinel  
 - **Infrastructure as Code:** Terraform (GitHub + Terraform Cloud)  
 - **DNS & Zero Trust Foundation:** Cloudflare  
 
 ---
 
-## Lab Checklist
+## Lab Completion Checklist
+
 - [x] Custom domain and DNS configuration  
 - [x] Secure Microsoft 365 tenant setup  
 - [x] Automated licensing and dynamic groups  
 - [x] Windows Autopilot onboarding  
-- [x] CIS-aligned security baselines  
+- [x] CIS-aligned endpoint security baselines  
 - [x] Endpoint Detection & Response (EDR/XDR)  
 - [x] Mobile security (Android BYOD)  
 - [x] Email and SaaS protection  
@@ -50,20 +63,23 @@ This reflects structured learning, deliberate design decisions, and real operati
 
 ## Implementation Journey
 
-### Step 1: Domain Purchase & DNS Foundation (Cloudflare)
-🔍 **Overview**  
+---
+
+## Step 1: Domain Purchase & DNS Foundation (Cloudflare)
+
+### 🔍 Overview
 Established a secure DNS foundation to support identity, email, and Zero Trust services.
 
-🛠️ **What I Did**
+### 🛠️ What I Did
 - Purchased a custom domain
-- Transferred DNS to Cloudflare
+- Transferred DNS management to Cloudflare
 - Verified nameserver propagation
 
-📚 **What I Learned**
-- How DNS underpins cloud identity and security
-- Why Cloudflare is common in Zero Trust designs
+### 📚 What I Learned
+- DNS is foundational to cloud identity and email security
+- Why Cloudflare is commonly used in Zero Trust architectures
 
-🧠 **Skills Demonstrated**
+### 🧠 Skills Demonstrated
 - DNS configuration
 - Third-party integration
 
@@ -71,21 +87,22 @@ Established a secure DNS foundation to support identity, email, and Zero Trust s
 
 ---
 
-### Step 2: Microsoft 365 Tenant Setup & Custom Domain Integration
-🔍 **Overview**  
+## Step 2: Microsoft 365 Tenant Setup & Custom Domain Integration
+
+### 🔍 Overview
 Created a secure Microsoft 365 tenant and integrated the custom domain.
 
-🛠️ **What I Did**
-- Created tenant with `onmicrosoft.com`
-- Enforced MFA for administrators
+### 🛠️ What I Did
+- Created tenant using `onmicrosoft.com`
+- Enforced MFA for administrative accounts
 - Verified custom domain ownership
 - Configured Exchange, SharePoint, Teams, and Intune DNS records
 
-📚 **What I Learned**
+### 📚 What I Learned
 - Microsoft 365 identity and tenant architecture
 - Importance of securing admin access from day one
 
-🧠 **Skills Demonstrated**
+### 🧠 Skills Demonstrated
 - Entra ID administration
 - MFA enforcement
 - Microsoft 365 DNS configuration
@@ -95,22 +112,23 @@ Created a secure Microsoft 365 tenant and integrated the custom domain.
 
 ---
 
-### Step 3: Licensing Strategy & Security Feature Enablement
-🔍 **Overview**  
-Enabled enterprise security capabilities through licensing.
+## Step 3: Licensing Strategy & Security Feature Enablement
 
-🛠️ **What I Did**
-- Activated required trial licenses:
-  - EMS E5
-  - Defender for Endpoint P2
-  - Defender for Office 365 P2
-  - Microsoft 365 Business Premium
+### 🔍 Overview
+Enabled enterprise security capabilities through proper licensing.
 
-📚 **What I Learned**
-- Licensing directly controls security posture
+### 🛠️ What I Did
+Activated trial licenses:
+- EMS E5  
+- Defender for Endpoint P2  
+- Defender for Office 365 P2  
+- Microsoft 365 Business Premium  
+
+### 📚 What I Learned
+- Licensing directly impacts security posture
 - Security requirements should drive license selection
 
-🧠 **Skills Demonstrated**
+### 🧠 Skills Demonstrated
 - License planning
 - Security enablement
 
@@ -118,20 +136,21 @@ Enabled enterprise security capabilities through licensing.
 
 ---
 
-### Step 4: Dynamic Groups, Auto-Licensing & Break-Glass Admin
-🔍 **Overview**  
-Automated identity management and ensured emergency access.
+## Step 4: Dynamic Groups, Auto-Licensing & Break-Glass Admin
 
-🛠️ **What I Did**
-- Created dynamic user/device groups
+### 🔍 Overview
+Automated identity management while ensuring emergency access.
+
+### 🛠️ What I Did
+- Created dynamic user and device groups
 - Automated license assignment
-- Created break-glass Global Admin excluded from CA policies
+- Created break-glass Global Admin excluded from Conditional Access
 
-📚 **What I Learned**
-- Automation improves consistency and scalability
-- Emergency access is a security best practice
+### 📚 What I Learned
+- Automation improves scalability and consistency
+- Emergency access is a critical security best practice
 
-🧠 **Skills Demonstrated**
+### 🧠 Skills Demonstrated
 - Identity automation
 - Group-based access control
 
@@ -139,20 +158,21 @@ Automated identity management and ensured emergency access.
 
 ---
 
-### Step 5: Intune Enrollment & Windows Autopilot Configuration
-🔍 **Overview**  
+## Step 5: Intune Enrollment & Windows Autopilot Configuration
+
+### 🔍 Overview
 Secured endpoints from first boot using Intune and Autopilot.
 
-🛠️ **What I Did**
+### 🛠️ What I Did
 - Enabled automatic Intune enrollment
 - Created Autopilot deployment profile
 - Validated compliance and policy application
 
-📚 **What I Learned**
+### 📚 What I Learned
 - Device security begins at enrollment
 - Licensing impacts endpoint workflows
 
-🧠 **Skills Demonstrated**
+### 🧠 Skills Demonstrated
 - Endpoint provisioning
 - Windows Autopilot
 
@@ -161,18 +181,19 @@ Secured endpoints from first boot using Intune and Autopilot.
 
 ---
 
-### Step 6: CIS Security Baselines & Endpoint Hardening
-🔍 **Overview**  
-Hardened endpoints using CIS-aligned baselines.
+## Step 6: CIS Security Baselines & Endpoint Hardening
 
-🛠️ **What I Did**
-- Deployed AV, firewall, encryption, ASR, and compliance policies
+### 🔍 Overview
+Hardened endpoints using CIS-aligned security baselines.
 
-📚 **What I Learned**
+### 🛠️ What I Did
+- Deployed antivirus, firewall, encryption, ASR, and compliance policies
+
+### 📚 What I Learned
 - Baselines reduce configuration drift
-- User vs device enforcement differences
+- Differences between user and device enforcement
 
-🧠 **Skills Demonstrated**
+### 🧠 Skills Demonstrated
 - Endpoint hardening
 - Policy management
 
@@ -180,48 +201,47 @@ Hardened endpoints using CIS-aligned baselines.
 
 ---
 
+## Step 7: Defender for Endpoint & XDR Integration
 
-### Step 7: Defender for Endpoint & XDR Integration
+### 🔍 Overview
+Enabled endpoint detection and response and validated XDR telemetry.
 
-#### 🔍 Overview
-Enabled endpoint detection and response and validated XDR telemetry integration across enrolled devices.
+### 🛠️ What I Did
+- Integrated Defender for Endpoint with Intune
+- Enabled EDR, tamper protection, and live response
+- Verified endpoint protection status
 
-#### 🛠️ What I Did
-- Integrated Defender for Endpoint with Intune.
-- Enabled EDR, tamper protection, and live response.
-- Verified endpoint protection status across enrolled devices.
+### 📚 What I Learned
+- Endpoint telemetry strengthens XDR investigations
+- How Intune and Defender integrate for enforcement and visibility
 
-#### 📚 What I Learned
-- How endpoint telemetry supports XDR investigations.
-- How Intune and Defender work together for enforcement + visibility.
-
-#### 🧠 Skills Demonstrated
-- Endpoint security  
-- Security tool integration  
+### 🧠 Skills Demonstrated
+- Endpoint security
+- Security tool integration
 
 ![Domain added to Microsoft 365 tenant](./evidence/Screenshot%20(36)%20-%20Copy.jpg)
 ![Microsoft 365 domain verification](./evidence/Screenshot%20(69)%20-%20Copy.jpg)
 
 ---
 
-### Step 8: Mobile Security — Android Enterprise (BYOD)
+## Step 8: Mobile Security — Android Enterprise (BYOD)
 
-#### 🔍 Overview
-Implemented BYOD controls using Android Enterprise and app protection to separate corporate and personal data.
+### 🔍 Overview
+Implemented BYOD security using Android Enterprise and app protection.
 
-#### 🛠️ What I Did
-- Configured Android Enterprise and Managed Google Play.
-- Created app protection and compliance policies.
-- Enforced Conditional Access for mobile users.
-- Tested onboarding using Company Portal.
+### 🛠️ What I Did
+- Configured Android Enterprise and Managed Google Play
+- Created app protection and compliance policies
+- Enforced Conditional Access
+- Tested onboarding using Company Portal
 
-#### 📚 What I Learned
-- BYOD risks and how app-level controls reduce data exposure.
-- Differences between device management and app protection policies.
+### 📚 What I Learned
+- BYOD risks and mitigation strategies
+- Difference between device management and app protection
 
-#### 🧠 Skills Demonstrated
-- Mobile device management  
-- App protection policies  
+### 🧠 Skills Demonstrated
+- Mobile device management
+- App protection policies
 
 <p align="center">
   <img src="evidence/WhatsApp%20Image%202025-12-18%20at%205.04.38%20PM.jpeg" width="280">
@@ -233,23 +253,23 @@ Implemented BYOD controls using Android Enterprise and app protection to separat
 
 ---
 
-### Step 9: Microsoft Defender for Office 365 — Email Threat Protection
+## Step 9: Microsoft Defender for Office 365 — Email Threat Protection
 
-#### 🔍 Overview
-Hardened email security using Defender for Office 365 policies to reduce phishing, malware, and spam risk.
+### 🔍 Overview
+Strengthened email security against phishing and malware.
 
-#### 🛠️ What I Did
-- Configured Defender for Office 365.
-- Enabled Microsoft-recommended presets.
-- Created custom phishing, malware, spam, Safe Links, and Safe Attachments policies.
+### 🛠️ What I Did
+- Configured Defender for Office 365
+- Enabled recommended presets
+- Created custom phishing, malware, spam, Safe Links, and Safe Attachments policies
 
-#### 📚 What I Learned
-- Why email remains the most common initial access vector.
-- How layered controls reduce both credential theft and malware delivery.
+### 📚 What I Learned
+- Email remains the most common attack vector
+- Layered controls significantly reduce risk
 
-#### 🧠 Skills Demonstrated
-- Email security administration  
-- Threat policy configuration  
+### 🧠 Skills Demonstrated
+- Email security administration
+- Threat policy configuration
 
 ![Screenshot 61](./evidence/Screenshot%20(61)%20-%20Copy.jpg)
 ![Screenshot 62](./evidence/Screenshot%20(62)%20-%20Copy.jpg)
@@ -258,78 +278,71 @@ Hardened email security using Defender for Office 365 policies to reduce phishin
 
 ---
 
-### Step 10: Defender for Cloud Apps (CASB) & SaaS Security
+## Step 10: Defender for Cloud Apps (CASB) & SaaS Security
 
-#### 🔍 Overview
-Improved SaaS visibility and reduced shadow IT risk using CASB controls and discovery.
+### 🔍 Overview
+Improved SaaS visibility and reduced shadow IT risk.
 
-#### 🛠️ What I Did
-- Connected Microsoft 365 and Entra ID to Defender for Cloud Apps.
-- Enabled Cloud Discovery.
-- Reviewed and tagged unsanctioned cloud applications.
-- Integrated Defender for Endpoint for access control.
+### 🛠️ What I Did
+- Connected Microsoft 365 and Entra ID
+- Enabled Cloud Discovery
+- Reviewed unsanctioned applications
+- Integrated Defender for Endpoint
 
-#### 📚 What I Learned
-- How CASB provides governance and visibility across cloud apps.
-- Why unsanctioned SaaS usage can increase data leakage risk.
+### 📚 What I Learned
+- CASB provides governance across SaaS platforms
+- Shadow IT increases data leakage risk
 
-#### 🧠 Skills Demonstrated
-- CASB  
-- SaaS risk assessment  
+### 🧠 Skills Demonstrated
+- CASB
+- SaaS risk assessment
 
 ![Screenshot 50](./evidence/Screenshot%20(50)%20-%20Copy.jpg)
 ![Screenshot 71](./evidence/Screenshot%20(71)%20-%20Copy.jpg)
 
 ---
 
-### Step 11: Conditional Access Enforcement & Zero Trust Alignment
+## Step 11: Conditional Access Enforcement & Zero Trust Alignment
 
-#### 🔍 Overview
-Implemented identity-driven access controls using Conditional Access with safe staged rollout.
+### 🔍 Overview
+Implemented identity-driven access controls aligned with Zero Trust.
 
-#### 🛠️ What I Did
-- Disabled Microsoft Security Defaults.
-- Created Conditional Access policies in Report-only mode.
-- Validated policy impact before enforcement.
+### 🛠️ What I Did
+- Disabled Microsoft Security Defaults
+- Created Conditional Access policies in report-only mode
+- Validated policies before enforcement
 
-#### 📚 What I Learned
-- How Conditional Access enforces Zero Trust based on risk and device posture.
-- Why staged rollout prevents business disruption.
+### 📚 What I Learned
+- Conditional Access enforces Zero Trust dynamically
+- Staged rollout prevents business disruption
 
-#### 🧠 Skills Demonstrated
-- Zero Trust enforcement  
-- Identity governance  
+### 🧠 Skills Demonstrated
+- Identity governance
+- Zero Trust enforcement
 
 ![Microsoft Defender security overview](./evidence/S88.png)
 ![Screenshot 90](./evidence/Screenshot%20(90).png)
 
 ---
 
-### Step 12: SIEM Deployment with Infrastructure as Code (Microsoft Sentinel)
+## Step 12: SIEM Deployment with Infrastructure as Code (Microsoft Sentinel)
 
-#### 🔍 Overview
-In this step, I deployed **Microsoft Sentinel** as a cloud-native SIEM using **Terraform (Infrastructure as Code)**.  
-I used a DevOps-style workflow (**GitHub + Terraform Cloud**) to keep the deployment repeatable, auditable, and easy to rebuild.
+### 🔍 Overview
+Deployed Microsoft Sentinel using Terraform with an enterprise-style workflow.
 
-#### 🛠️ What I Did
-- Created a Terraform repository and connected it to **Terraform Cloud**.
-- Stored Azure authentication values securely using Terraform Cloud variables.
-- Deployed via Terraform:
-  - Resource Group
-  - Log Analytics Workspace
-  - Microsoft Sentinel instance
-- Verified successful deployment using Terraform run output and Azure Portal.
+### 🛠️ What I Did
+- Created Terraform repository
+- Connected Terraform Cloud
+- Deployed Log Analytics Workspace and Sentinel
 
-#### 📚 What I Learned
-- How to deploy SIEM infrastructure using IaC
-- How Terraform Cloud workflows simulate enterprise deployments
-- Sentinel architecture basics (Workspace + SIEM layer)
+### 📚 What I Learned
+- SIEM deployment using IaC
+- Sentinel architecture fundamentals
 
-#### 🧠 Skills Demonstrated
-- Terraform (IaC)
+### 🧠 Skills Demonstrated
+- Terraform
 - Azure resource provisioning
 - SIEM deployment
-- GitHub + Terraform Cloud integration
 
 ![Security configuration screenshot](./evidence/S106%20-%20Copy.png)
 ![Screenshot 110](./evidence/Screenshot%20(110)%20-%20Copy.jpg)
@@ -340,35 +353,20 @@ I used a DevOps-style workflow (**GitHub + Terraform Cloud**) to keep the deploy
 
 ---
 
-### Step 13: Centralized Log Collection & Security Visibility
+## Step 13: Centralized Log Collection & Security Visibility
 
-#### 🔍 Overview
-In this step, I configured **centralized security telemetry ingestion** into Microsoft Sentinel by onboarding core Microsoft identity, endpoint, and cloud data sources.  
-This created a single place to investigate security activity across the environment.
+### 🔍 Overview
+Centralized identity, endpoint, and cloud telemetry into Sentinel.
 
-#### 🛠️ What I Did
-- Installed required solutions from the **Microsoft Sentinel Content Hub**.
-- Connected and validated key data sources:
-  - Microsoft Entra ID
-  - Microsoft Defender for Endpoint
-  - Microsoft Defender for Office 365
-  - Microsoft Defender for Cloud Apps
-  - Microsoft Defender XDR
-  - Microsoft 365
-  - Azure Activity Logs
-  - Windows Security Events (via AMA)
-- Verified logs were flowing into Log Analytics using **KQL** and Sentinel views.
+### 🛠️ What I Did
+- Installed solutions from Sentinel Content Hub
+- Connected Entra ID, Defender, M365, Azure logs
+- Validated ingestion using KQL
 
-#### 📚 What I Learned
-- How SIEM platforms aggregate logs into a central investigation view
-- Common connector requirements (permissions, roles, onboarding steps)
-- How to validate ingestion and confirm event availability using KQL
-
-#### 🧠 Skills Demonstrated
-- Log ingestion & normalization
-- Microsoft Sentinel Content Hub
-- KQL (Kusto Query Language)
-- Security visibility & monitoring
+### 🧠 Skills Demonstrated
+- Log ingestion
+- KQL
+- Security monitoring
 
 ![Screenshot 124](./evidence/Screenshot%20(124)%20-%20Copy.jpg)
 ![Screenshot 126](./evidence/Screenshot%20(126)%20-%20Copy.jpg)
@@ -379,113 +377,47 @@ This created a single place to investigate security activity across the environm
 
 ---
 
-### Step 14: Azure Virtual Machine Deployment using Terraform
+## Step 14: Azure VM Deployment for Detection Testing
 
-#### 🔍 Overview
-In this step, I deployed an **Azure Virtual Machine** using **Terraform**.  
-This VM was intentionally exposed on **RDP (3389)** for a controlled period so I could generate real attack telemetry and test detection + response workflows safely.
+### 🔍 Overview
+Deployed a VM to generate controlled attack telemetry.
 
-#### 🛠️ What I Did
-- Created a separate Terraform repo/workspace for VM deployment.
-- Connected the repo to Terraform Cloud and configured variables securely.
-- Deployed:
-  - Azure Virtual Machine
-  - NIC
-  - VNet
-  - NSG
-- Connected the VM to the existing **Log Analytics Workspace** for monitoring.
-- Generated test telemetry using intentional failed logons (Event ID **4625**).
-
-#### 📚 What I Learned
-- How to deploy compute infrastructure via Terraform Cloud
-- How to prepare workloads for security monitoring and detection testing
-
-#### 🧠 Skills Demonstrated
-- Terraform
-- Azure compute + networking
-- Infrastructure as Code
+### 🛠️ What I Did
+- Deployed VM, VNet, NSG, NIC via Terraform
+- Connected VM to Log Analytics
+- Generated failed RDP logons (Event ID 4625)
 
 ![Screenshot 598](./evidence/Screenshot%20(598)%20-%20Copy.png)
 
 ---
 
-### Step 15: Threat Detection, GeoIP Enrichment & Incident Creation
+## Step 15: Threat Detection, GeoIP Enrichment & Visualization
 
-#### 🔍 Overview
-In this step, I created detection rules in Microsoft Sentinel, enriched attacker telemetry using **GeoIP**, and visualized real-world brute-force attempts on a world map.
+### 🔍 Overview
+Built detections and enriched attacker data.
 
-#### 🛠️ What I Did
-- Built **Analytics Rules** in Microsoft Sentinel.
-- Detected **RDP brute-force attempts** using:
-  - Event ID **4625**
-  - Threshold-based detection logic within a time window
-- Enabled automatic incident creation and validated incident generation.
-
-#### 🧠 GeoIP Log Enrichment
-- Uploaded a **GeoIP watchlist** (IP ranges + geographic data) to Sentinel.
-- Enriched attacker IPs with:
-  - Country, City
-  - Latitude/Longitude
-- Used enrichment to make investigations faster and more meaningful.
-
-#### 🌍 Attack Visualization
-- Built a Sentinel **Workbook** to map attacker origins globally.
-- Confirmed real brute-force activity and visualized sources by country/region.
-
-#### 📚 What I Learned
-- Detection engineering using KQL + Sentinel analytics rules
-- Enrichment improves investigation speed and context
-- How dashboards/workbooks support SOC reporting and monitoring
-
-#### 🧠 Skills Demonstrated
-- Threat detection engineering
-- KQL analytics rules
-- GeoIP enrichment
-- Sentinel Workbooks
-- SOC investigation workflows
+### 🛠️ What I Did
+- Created analytics rules for RDP brute-force
+- Uploaded GeoIP watchlist
+- Built Sentinel Workbooks
 
 ![Screenshot 163](./evidence/Screenshot%20(163)%20-%20Copy.jpg)
 ![Screenshot 227](./evidence/Screenshot%20(227)%20-%20Copy.jpg)
 ![Screenshot 229](./evidence/Screenshot%20(229)%20-%20Copy.jpg)
-
 ![Screenshot 277](./evidence/Screenshot%20(277)%20-%20Copy.jpg)
-
 ![Screenshot 311](./evidence/Screenshot%20(311)%20-%20Copy.jpg)
 
 ---
 
-### Step 16: SOAR Playbooks & Automated Incident Response
+## Step 16: SOAR Playbooks & Automated Incident Response
 
-#### 🔍 Overview
-In this step, I implemented **SOAR automation** so that Microsoft Sentinel could automatically trigger response actions to contain attacks without manual intervention.
+### 🔍 Overview
+Automated incident containment using SOAR.
 
-#### 🛠️ What I Did
-- Created a **Logic App playbook** triggered by Sentinel incidents.
-- Parsed incident payload using **Parse JSON**.
-- Triggered an **Azure Automation Runbook** using managed identity.
-- Automated response actions:
-  - Identify impacted VM
-  - Locate associated NSG
-  - Block attacker IP on **RDP (3389)** using a deny rule
-
-#### 🔁 Automated Response Flow
-1. Sentinel detects suspicious RDP activity  
-2. Incident is created automatically  
-3. Playbook triggers (Logic App)  
-4. Runbook applies NSG deny rule  
-5. Threat is contained without manual action  
-
-#### 📚 What I Learned
-- How SOAR reduces response time and human workload
-- How managed identities enable secure automation
-- How network-level controls (NSGs) can be used for containment
-
-#### 🧠 Skills Demonstrated
-- SOAR (Microsoft Sentinel)
-- Logic Apps
-- Azure Automation Runbooks
-- NSG-based containment
-- Automated incident response
+### 🛠️ What I Did
+- Built Logic App playbook
+- Triggered Azure Automation Runbook
+- Blocked attacker IP using NSG rules
 
 ![Screenshot 230](./evidence/Screenshot%20(230)%20-%20Copy.jpg)
 ![Screenshot 232](./evidence/Screenshot%20(232)%20-%20Copy.jpg)
@@ -496,6 +428,7 @@ In this step, I implemented **SOAR automation** so that Microsoft Sentinel could
 ![Screenshot 273](./evidence/Screenshot%20(273)%20-%20Copy.jpg)
 ![Screenshot 331](./evidence/Screenshot%20(331)%20-%20Copy.jpg)
 ![Screenshot 2025-12-19 153537](./evidence/Screenshot%202025-12-19%20153537.png)
+
 
 ---
 
