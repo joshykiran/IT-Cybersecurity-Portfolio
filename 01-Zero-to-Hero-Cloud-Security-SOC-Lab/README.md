@@ -93,7 +93,7 @@ Established a secure DNS foundation to support identity, email, and Zero Trust s
 Created a secure Microsoft 365 tenant and integrated the custom domain.
 
 ### 🛠️ What I Did
-- Created tenant using `onmicrosoft.com`
+
 - Enforced MFA for administrative accounts
 - Verified custom domain ownership
 - Configured Exchange, SharePoint, Teams, and Intune DNS records
