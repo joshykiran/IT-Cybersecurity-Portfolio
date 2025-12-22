@@ -308,9 +308,14 @@ Secured a personal Android device using Android Enterprise Work Profile to prote
 </p>
 
 
-![Intune Device Onboarding Dashboard](./evidence/91.png)
+<p align="center">
+  <img src="./evidence/91.png" alt="Intune Device Onboarding Dashboard">
+</p>
 
-*Intune Device Onboarding Dashboard*
+<p align="center">
+  <em>Intune Device Onboarding Dashboard</em>
+</p>
+
 
 
 
