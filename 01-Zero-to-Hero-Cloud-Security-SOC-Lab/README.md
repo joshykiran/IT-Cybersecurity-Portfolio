@@ -200,7 +200,8 @@ Secured endpoints from first boot using Intune and Autopilot.
 - Endpoint provisioning
 - Windows Autopilot
 
-6 PIC
+![Security configuration evidence](./evidence/6.png)
+
 
 ---
 
@@ -241,7 +242,8 @@ Enabled endpoint detection and response and validated XDR telemetry.
 - Endpoint security
 - Security tool integration
 
-8 PIC
+![Security configuration evidence](./evidence/8.png)
+
 
 ---
 
@@ -266,7 +268,8 @@ Onboarded and secured a Microsoft-provided Windows Enterprise device using Micro
 - Microsoft Intune device onboarding  
 - Endpoint compliance and security validation  
 
-WINDOWS PIC
+![Security configuration overview](./evidence/Screenshot%20(92).png)
+
 
 ---
 
