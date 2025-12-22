@@ -87,79 +87,102 @@ Established a secure DNS foundation to support identity, email, and Zero Trust s
 
 ---
 
-## Step 2: Microsoft 365 Tenant Setup & Custom Domain Integration
+## Step 2: Secure Microsoft 365 Tenant Foundation with Custom Domain, Cloudflare DNS & Enterprise Licensing**
 
-### 🔍 Overview
-Created a secure Microsoft 365 tenant and integrated the custom domain.
+### 🔍 Overview  
+Built a security-first Microsoft 365 tenant by integrating a custom domain, enforcing strong identity controls, configuring Cloudflare-managed DNS, and enabling enterprise-grade security through strategic licensing.
 
-### 🛠️ What I Did
+This step established the core identity, email, collaboration, and device-management foundation required for all downstream security, endpoint, and SIEM integrations.
 
-- Enforced MFA for administrative accounts
-- Verified custom domain ownership
-- Configured Exchange, SharePoint, Teams, and Intune DNS records
 
-### 📚 What I Learned
-- Microsoft 365 identity and tenant architecture
-- Importance of securing admin access from day one
+### 🛠️ What I Did  
 
-### 🧠 Skills Demonstrated
-- Entra ID administration
-- MFA enforcement
-- Microsoft 365 DNS configuration
+#### Tenant & Identity Foundation
+- Created a new Microsoft 365 tenant backed by **Microsoft Entra ID**
+- Enforced **MFA** for administrative accounts during tenant onboarding
+
+#### Custom Domain & DNS Integration
+- Added and verified a custom domain using DNS-based validation
+- Migrated DNS management to **Cloudflare**
+- Used Cloudflare’s Microsoft 365 integration for domain authorization
+- Configured and validated DNS records for:
+  - Exchange Online  
+  - SharePoint Online  
+  - Microsoft Teams  
+  - Microsoft Intune  
+- Ensured correct record types and disabled proxying where required
+
+#### Licensing & Security Enablement
+- Activated trial licenses to unlock enterprise security capabilities:
+  - Microsoft 365 Business Premium  
+  - Enterprise Mobility + Security (EMS) E5  
+  - Microsoft Defender for Endpoint (Plan 2)  
+  - Microsoft Defender for Office 365 (Plan 2)  
+  - Microsoft 365 E5 (security workloads)  
+- Aligned licensing with security requirements including EDR, XDR, MDM, and email protection
+- Verified license readiness for Intune, Defender, and Sentinel integrations
+
+
+### 📚 What I Learned  
+- Early identity, DNS, and licensing decisions define Microsoft 365 security posture  
+- Enforcing MFA from day one significantly reduces administrative risk  
+- Cloudflare simplifies and strengthens Microsoft 365 domain management  
+- Microsoft security capabilities are license-driven, not configuration-only  
+- Proper DNS configuration is critical for email flow, trust, and device management  
+
+
+### 🧠 Skills Demonstrated  
+- Microsoft Entra ID administration  
+- Secure Microsoft 365 tenant onboarding  
+- MFA enforcement and identity hardening  
+- Custom domain and Cloudflare DNS management  
+- Microsoft 365 service DNS configuration  
+- Enterprise licensing strategy and security enablement  
+
+
 
 ![Cloudflare DNS Records](./evidence/Screenshot-12.jpg)
 ![DNS Authorization via Cloudflare](./evidence/Screenshot-13.jpg)
-
----
-
-## Step 3: Licensing Strategy & Security Feature Enablement
-
-### 🔍 Overview
-Enabled enterprise security capabilities through proper licensing.
-
-### 🛠️ What I Did
-Activated trial licenses:
-- Microsoft 365 E5  
-- Defender for Endpoint P2  
-- Defender for Office 365 P2  
-- Microsoft 365 Business Premium
-- Windows 365 enterprise
-
-### 📚 What I Learned
-- Licensing directly impacts security posture
-- Security requirements should drive license selection
-
-### 🧠 Skills Demonstrated
-- License planning
-- Security enablement
-
 ![Domain and DNS verification](./evidence/Screenshot%20(24)%20-%20Copy.png)
 
 ---
 
-## Step 4: Dynamic Groups, Auto-Licensing & Break-Glass Admin
 
-### 🔍 Overview
-Automated identity management while ensuring emergency access.
+## Step 3: Identity Automation with Dynamic Groups, Auto-Licensing & Break-Glass Access**
 
-### 🛠️ What I Did
-- Created dynamic user and device groups
-- Automated license assignment
-- Created break-glass Global Admin excluded from Conditional Access
+### 🔍 Overview  
+Implemented scalable identity automation using dynamic Microsoft Entra ID groups, enabling automatic license assignment and secure emergency access.
 
-### 📚 What I Learned
-- Automation improves scalability and consistency
-- Emergency access is a critical security best practice
+---
 
-### 🧠 Skills Demonstrated
-- Identity automation
-- Group-based access control
+### 🛠️ What I Did  
+- Created dynamic **user** and **device** security groups for automated governance  
+- Designed groups to support licensing, Intune policies, Conditional Access, and Autopilot  
+- Configured **group-based licensing** to automatically assign security and productivity licenses  
+- Ensured new users receive Intune, Defender, and collaboration access by default  
+- Created a **Global Administrator break-glass account** and excluded it from Conditional Access to prevent tenant lockout  
+
+### 📚 What I Learned  
+- Dynamic groups improve scalability and consistency  
+- Group-based licensing reduces operational risk  
+- Break-glass accounts are essential for tenant resilience  
+
+### 🧠 Skills Demonstrated  
+- Microsoft Entra ID dynamic groups  
+- Identity automation and access governance  
+- Group-based licensing  
+- Break-glass account design  
+
+### ✅ Why This Step Matters  
+This step converted the tenant into an **automated, policy-driven identity platform**, ensuring secure onboarding while preserving emergency access.
+
+
 
 ![Domain and DNS configuration confirmation](./evidence/Screenshot%20(81)%20-%20Copy.jpg)
 
 ---
 
-## Step 5: Intune Enrollment & Windows Autopilot Configuration
+## Step 4: Intune Enrollment & Windows Autopilot Configuration
 
 ### 🔍 Overview
 Secured endpoints from first boot using Intune and Autopilot.
@@ -177,12 +200,11 @@ Secured endpoints from first boot using Intune and Autopilot.
 - Endpoint provisioning
 - Windows Autopilot
 
-![Cloudflare nameserver update confirmation](./evidence/Screenshot%20(56)%20-%20Copy.jpg)
-![Security configuration overview](./evidence/Screenshot%20(92).png)
+6 PIC
 
 ---
 
-## Step 6: CIS Security Baselines & Endpoint Hardening
+## Step 5: CIS Security Baselines & Endpoint Hardening
 
 ### 🔍 Overview
 Hardened endpoints using CIS-aligned security baselines.
@@ -201,8 +223,7 @@ Hardened endpoints using CIS-aligned security baselines.
 ![Domain DNS propagation status](./evidence/Screenshot%20(82)%20-%20Copy.jpg)
 
 ---
-
-## Step 7: Defender for Endpoint & XDR Integration
+## Step 6: Defender for Endpoint & XDR Integration
 
 ### 🔍 Overview
 Enabled endpoint detection and response and validated XDR telemetry.
@@ -220,29 +241,54 @@ Enabled endpoint detection and response and validated XDR telemetry.
 - Endpoint security
 - Security tool integration
 
-![Domain added to Microsoft 365 tenant](./evidence/Screenshot%20(36)%20-%20Copy.jpg)
-![Microsoft 365 domain verification](./evidence/Screenshot%20(69)%20-%20Copy.jpg)
+8 PIC
 
 ---
 
-## Step 8: Mobile Security — Android Enterprise (BYOD)
+## Step 7: Windows Enterprise Endpoint Onboarding & Intune Validation**
 
-### 🔍 Overview
-Implemented BYOD security using Android Enterprise and app protection.
+### 🔍 Overview  
+Onboarded and secured a Microsoft-provided Windows Enterprise device using Microsoft Intune to validate endpoint management and security enforcement.
 
-### 🛠️ What I Did
-- Configured Android Enterprise and Managed Google Play
-- Created app protection and compliance policies
-- Enforced Conditional Access
-- Tested onboarding using Company Portal
 
-### 📚 What I Learned
-- BYOD risks and mitigation strategies
-- Difference between device management and app protection
+### 🛠️ What I Did  
+- Onboarded a **Windows Enterprise–licensed device** into Microsoft Intune  
+- Verified successful enrollment and visibility under Windows endpoints  
+- Confirmed application of:
+  - CIS-aligned security baselines  
+  - Compliance and configuration policies  
+  - Microsoft Defender for Endpoint protection  
+- Validated device compliance and security posture in Intune  
 
-### 🧠 Skills Demonstrated
-- Mobile device management
-- App protection policies
+
+### 🧠 Skills Demonstrated  
+- Windows Enterprise endpoint management  
+- Microsoft Intune device onboarding  
+- Endpoint compliance and security validation  
+
+WINDOWS PIC
+
+---
+
+## Step 8: Android BYOD Onboarding with Intune & Work Profile Protection**
+
+### 🔍 Overview  
+Secured a personal Android device using Android Enterprise Work Profile to protect corporate data while preserving user privacy.
+
+
+### 🛠️ What I Did  
+- Onboarded a **personal Android device** into Intune using **Android Enterprise (Work Profile)**  
+- Integrated **Managed Google Play** with Intune  
+- Deployed corporate applications into the **Work profile**  
+- Applied **App Protection (MAM) policies** to secure organizational data  
+- Enforced access controls using **Conditional Access**  
+- Validated separation between **personal and work apps**  
+
+### 🧠 Skills Demonstrated  
+- Android Enterprise (BYOD) configuration  
+- App Protection (MAM) policy enforcement  
+- Managed Google Play integration  
+- Mobile Conditional Access enforcement  
 
 <p align="center">
   <img src="evidence/WhatsApp%20Image%202025-12-18%20at%205.04.38%20PM.jpeg" width="280">
@@ -253,6 +299,7 @@ Implemented BYOD security using Android Enterprise and app protection.
 </p>
 
 ---
+
 
 ## Step 9: Microsoft Defender for Office 365 — Email Threat Protection
 
@@ -298,7 +345,7 @@ Improved SaaS visibility and reduced shadow IT risk.
 - CASB
 - SaaS risk assessment
 
-![Screenshot 50](./evidence/Screenshot%20(50)%20-%20Copy.jpg)
+![Microsoft 365 domain verification](./evidence/Screenshot%20(69)%20-%20Copy.jpg)
 ![Screenshot 71](./evidence/Screenshot%20(71)%20-%20Copy.jpg)
 
 ---
