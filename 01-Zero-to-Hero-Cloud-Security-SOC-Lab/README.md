@@ -440,82 +440,287 @@ This step established granular, risk-aware access control across users, devices,
 
 ---
 
-## Step 12: SIEM Deployment with Infrastructure as Code (Microsoft Sentinel)
+## Step 12: Identity Hardening & Secure Automation Preparation (Azure Entra ID)
 
 ### 🔍 Overview
-Deployed Microsoft Sentinel using Terraform with an enterprise-style workflow.
+Prepared the Azure tenant for secure Infrastructure as Code (IaC) by replacing default security settings with enterprise-ready identity controls and service-principal–based authentication.
+
 
 ### 🛠️ What I Did
-- Created Terraform repository
-- Connected Terraform Cloud
-- Deployed Log Analytics Workspace and Sentinel
+- Disabled **Microsoft Security Defaults** in Azure Entra ID to enable custom Conditional Access
+- Created an **App Registration** for Terraform automation
+- Generated a **Client Secret** for non-interactive authentication
+- Assigned **Contributor** RBAC role at the subscription scope
+- Verified tenant, subscription, and permission alignment
+
 
 ### 📚 What I Learned
-- SIEM deployment using IaC
-- Sentinel architecture fundamentals
+- Security Defaults conflict with advanced automation scenarios
+- Service principals are mandatory for secure IaC
+- Identity must be hardened before deploying security platforms
+
 
 ### 🧠 Skills Demonstrated
-- Terraform
-- Azure resource provisioning
+- Azure Entra ID administration  
+- Identity governance  
+- RBAC and least-privilege access  
+
+---
+
+EVDCE
+
+---
+
+## Step 13: Terraform Cloud Configuration
+
+### 🔍 Overview
+Configured Terraform Cloud to securely deploy Azure infrastructure using remote state and service principal authentication.
+
+
+### 🛠️ What I Did
+- Created a **Terraform Cloud organization and workspace**
+- Connected the GitHub repository to Terraform Cloud
+- Configured required environment variables:
+  - `ARM_CLIENT_ID`
+  - `ARM_CLIENT_SECRET`
+  - `ARM_SUBSCRIPTION_ID`
+  - `ARM_TENANT_ID`
+- Selected Terraform version and enabled auto-apply
+- Validated authentication to Azure
+
+
+### 🧠 Skills Demonstrated
+- Terraform Cloud
+- Secure IaC workflows
+- Remote state management
+
+
+EVDCE
+
+---
+
+## Step 14: Microsoft Sentinel Deployment (Terraform)
+
+### 🔍 Overview
+Deployed Microsoft Sentinel using Terraform as a centralized SIEM for Azure security monitoring.
+
+
+### 🛠️ What I Did
+- Deployed a **Log Analytics Workspace**
+- Enabled **Microsoft Sentinel** on the workspace
+- Installed solutions from **Sentinel Content Hub**
+- Configured **Azure Activity** data ingestion via Azure Policy
+- Executed remediation tasks to enforce diagnostics
+
+
+### 🧠 Skills Demonstrated
 - SIEM deployment
+- Azure Policy
+- Log ingestion and monitoring
 
-![Security configuration screenshot](./evidence/S106%20-%20Copy.png)
-![Screenshot 110](./evidence/Screenshot%20(110)%20-%20Copy.jpg)
-![Screenshot 113](./evidence/Screenshot%20(113)%20-%20Copy.jpg)
-![Screenshot 118](./evidence/Screenshot%20(118)%20-%20Copy.jpg)
-![Screenshot 120](./evidence/Screenshot%20(120)%20-%20Copy.jpg)
-![Screenshot 121](./evidence/Screenshot%20(121)%20-%20Copy.jpg)
-
+---
+EVDCE
 
 ---
 
-## Step 13: Centralized Log Collection & Security Visibility
+## Step 15: Virtual Machine Deployment (Terraform)
 
 ### 🔍 Overview
-Centralized identity, endpoint, and cloud telemetry into Sentinel.
+Deployed a Windows virtual machine to generate real security telemetry for Sentinel detections and testing.
+
 
 ### 🛠️ What I Did
-- Installed solutions from Sentinel Content Hub
-- Connected Entra ID, Defender, M365, Azure logs
-- Validated ingestion using KQL
+- Deployed a **Windows VM** using Terraform
+- Created supporting infrastructure:
+  - Resource Group
+  - Virtual Network & Subnet
+  - Network Security Group
+  - Public IP and Network Interface
+- Retrieved VM outputs and credentials
+- Successfully connected to the VM via **RDP**
+- Validated VM readiness for attack simulation
+
 
 ### 🧠 Skills Demonstrated
-- Log ingestion
-- KQL
-- Security monitoring
-
-![Screenshot 124](./evidence/Screenshot%20(124)%20-%20Copy.jpg)
-![Screenshot 126](./evidence/Screenshot%20(126)%20-%20Copy.jpg)
-![Screenshot 127](./evidence/Screenshot%20(127)%20-%20Copy.jpg)
-![Screenshot 128](./evidence/Screenshot%20(128)%20-%20Copy.jpg)
-![Screenshot 159](./evidence/Screenshot%20(159)%20-%20Copy.jpg)
-![Screenshot 160](./evidence/Screenshot%20(160)%20-%20Copy.jpg)
-
----
-
-## Step 14: Azure VM Deployment for Detection Testing
-
-### 🔍 Overview
-Deployed a VM to generate controlled attack telemetry.
-
-### 🛠️ What I Did
-- Deployed VM, VNet, NSG, NIC via Terraform
-- Connected VM to Log Analytics
-- Generated failed RDP logons (Event ID 4625)
+- Azure virtual machines
+- Network security configuration
+- Infrastructure validation
 
 ![Screenshot 598](./evidence/Screenshot%20(598)%20-%20Copy.png)
 
 ---
 
-## Step 15: Threat Detection, GeoIP Enrichment & Visualization
 
-### 🔍 Overview
-Built detections and enriched attacker data.
+## Step 16: Conditional Access Enforcement & Attack Preparation**
 
-### 🛠️ What I Did
-- Created analytics rules for RDP brute-force
-- Uploaded GeoIP watchlist
-- Built Sentinel Workbooks
+### 🔍 Overview  
+Hardened identity access using Conditional Access policies aligned with Zero Trust principles and prepared the environment for downstream attack detection and SIEM analysis.
+
+This step transitioned the tenant from Microsoft Security Defaults to **custom, controlled Conditional Access enforcement**, ensuring policies could be staged, validated, and safely applied before enabling security monitoring and attack simulation.
+
+
+### 🛠️ What I Did  
+
+#### Disabled Microsoft Security Defaults
+- Navigated to **Microsoft Entra ID → Properties**
+- Disabled **Microsoft Security Defaults** to allow granular Conditional Access configuration
+- Confirmed readiness for custom policy enforcement
+
+#### Configured Conditional Access Policies
+- Created Conditional Access policies using **report-only mode** to prevent user lockout
+- Applied policies targeting:
+  - All users (with appropriate admin exclusions)
+  - All cloud applications
+- Implemented access controls including:
+  - Mandatory Multi-Factor Authentication (MFA)
+  - Device-based access conditions (where applicable)
+- Validated policy impact using **Sign-in logs and report-only insights**
+
+#### Identity Security Validation
+- Reviewed Conditional Access sign-in evaluations
+- Confirmed policies were correctly triggering without blocking access
+- Ensured policies were ready for enforcement prior to SIEM onboarding
+
+#### Attack Preparation Context
+- Finalized identity controls before exposing workloads for monitoring
+- Established a secure baseline required for:
+  - Authentication log analysis
+  - Failed sign-in detection
+  - Brute-force and anomalous access monitoring in Sentinel
+
+
+### 📚 What I Learned  
+- Microsoft Security Defaults must be disabled before Conditional Access can be customized
+- Report-only mode is critical for safely testing identity policies
+- Conditional Access is a **core Zero Trust control**, not just an MFA toggle
+- Identity hardening must precede detection and SIEM workflows
+- Proper exclusions prevent administrative lockout scenarios
+
+
+### 🧠 Skills Demonstrated  
+- Microsoft Entra ID administration  
+- Conditional Access policy design and validation  
+- Zero Trust identity enforcement  
+- Identity security hardening  
+- Pre-SIEM attack readiness planning  
+
+---
+
+EVDCE
+
+---
+
+
+## **Step 17: Threat Detection, GeoIP Enrichment & Attack Visualization (Microsoft Sentinel)**
+
+### 🔍 Overview  
+Implemented end-to-end threat detection and visualization using Microsoft Sentinel by ingesting security logs, enriching attacker data with GeoIP context, and visualizing global attack activity through interactive workbooks.
+
+This step transformed raw authentication events into actionable security insights and attacker intelligence.
+
+---
+
+### 🛠️ What I Did  
+
+#### Centralized Log Collection
+- Created a **Log Analytics Workspace (LAW)** as a centralized log repository
+- Deployed **Microsoft Sentinel** and connected it to the LAW
+- Installed and configured the **Windows Security Events via Azure Monitor Agent (AMA)** connector
+- Created a **Data Collection Rule (DCR)** to forward Windows Security logs from the VM
+- Verified log ingestion by querying **SecurityEvent** logs using KQL
+
+#### Threat Detection & KQL Analysis
+- Analyzed authentication logs for failed sign-in activity
+- Queried and filtered **Event ID 4625 (failed logon attempts)** using KQL
+- Validated attacker IP addresses and authentication patterns
+- Observed real-world brute-force activity targeting the exposed VM
+
+#### GeoIP Log Enrichment
+- Imported a **GeoIP CSV dataset** as a Sentinel **Watchlist**
+- Mapped attacker IP addresses to:
+  - Country
+  - City
+  - Latitude and longitude
+- Enriched security logs using KQL `ipv4_lookup()` to correlate IPs with geographic data
+- Confirmed enriched telemetry provided location-based attacker context
+
+#### Attack Map & Visualization
+- Created a **Microsoft Sentinel Workbook** for visualization
+- Removed default widgets and added a custom query-based map
+- Imported a prebuilt **JSON workbook** to generate a global attack map
+- Visualized:
+  - Attacker locations
+  - Volume of failed logon attempts by region
+- Customized map labels, metrics, and visual settings for clarity
+
+---
+
+### 📚 What I Learned  
+- SIEM value comes from **contextualized data**, not raw logs
+- KQL is essential for security investigations and threat hunting
+- GeoIP enrichment enables faster understanding of attack origins
+- Sentinel Workbooks provide powerful, real-time security visualization
+- Public-facing workloads are rapidly discovered and attacked
+
+---
+
+### 🧠 Skills Demonstrated  
+- Microsoft Sentinel (SIEM) deployment and configuration  
+- Log Analytics Workspace architecture  
+- KQL querying and log analysis  
+- Threat detection and brute-force analysis  
+- GeoIP enrichment using Sentinel Watchlists  
+- Security data visualization with Sentinel Workbooks  
+
+---
+
+EVDCE
+
+---
+
+
+### Step 18: EDR Validation (Planned – Subscription Ended)
+
+🔍 Overview  
+This step was intended to validate endpoint detection using the EICAR test file to demonstrate Microsoft Defender for Endpoint alerting.
+
+🛠️ Intended Actions  
+- Execute EICAR test string on the protected VM  
+- Observe Defender for Endpoint detection  
+- Validate alert flow into Microsoft Sentinel  
+
+ℹ️ Note  
+This validation step could not be executed as the Azure subscription expired before test execution.  
+However, Defender for Endpoint integration and automation pipelines were fully configured and verified prior to expiration.
+
+
+## Project Summary
+This project demonstrates my ability to **design, secure, monitor, detect, enrich, visualize, and automate** security operations in a modern cloud environment.
+
+It showcases:
+- Identity-first security
+- Endpoint and email protection
+- Centralized logging and SIEM operations
+- Threat detection and GeoIP enrichment
+- Automated SOAR-based incident response
+
+---
+
+## Why This Project Matters
+This project reflects my readiness for **SOC Analyst, Cloud Security, and Junior Security Engineer roles**.
+
+It demonstrates:
+- Practical hands-on execution  
+- Security reasoning and design thinking  
+- Clear documentation and communication  
+- A strong operational mindset aligned with real-world security teams  
+
+
+
+
+
+
+ GeoIP 
 
 ![Screenshot 163](./evidence/Screenshot%20(163)%20-%20Copy.jpg)
 ![Screenshot 227](./evidence/Screenshot%20(227)%20-%20Copy.jpg)
@@ -525,7 +730,7 @@ Built detections and enriched attacker data.
 
 ---
 
-## Step 16: SOAR Playbooks & Automated Incident Response
+SOAR Playbooks & Automated Incident Response
 
 ### 🔍 Overview
 Automated incident containment using SOAR.
@@ -548,23 +753,24 @@ Automated incident containment using SOAR.
 
 ---
 
-## Project Summary
-This project demonstrates my ability to **design, secure, monitor, detect, enrich, visualize, and automate** security operations in a modern cloud environment.
 
-It showcases:
-- Identity-first security
-- Endpoint and email protection
-- Centralized logging and SIEM operations
-- Threat detection and GeoIP enrichment
-- Automated SOAR-based incident response
 
----
+12
+![Security configuration screenshot](./evidence/S106%20-%20Copy.png)
+![Screenshot 110](./evidence/Screenshot%20(110)%20-%20Copy.jpg)
+![Screenshot 113](./evidence/Screenshot%20(113)%20-%20Copy.jpg)
+![Screenshot 118](./evidence/Screenshot%20(118)%20-%20Copy.jpg)
+![Screenshot 120](./evidence/Screenshot%20(120)%20-%20Copy.jpg)
+![Screenshot 121](./evidence/Screenshot%20(121)%20-%20Copy.jpg)
 
-## Why This Project Matters
-This project reflects my readiness for **SOC Analyst, Cloud Security, and Junior Security Engineer roles**.
+13
+![Screenshot 124](./evidence/Screenshot%20(124)%20-%20Copy.jpg)
+![Screenshot 126](./evidence/Screenshot%20(126)%20-%20Copy.jpg)
+![Screenshot 127](./evidence/Screenshot%20(127)%20-%20Copy.jpg)
+![Screenshot 128](./evidence/Screenshot%20(128)%20-%20Copy.jpg)
+![Screenshot 159](./evidence/Screenshot%20(159)%20-%20Copy.jpg)
+![Screenshot 160](./evidence/Screenshot%20(160)%20-%20Copy.jpg)
 
-It demonstrates:
-- Practical hands-on execution  
-- Security reasoning and design thinking  
-- Clear documentation and communication  
-- A strong operational mindset aligned with real-world security teams  
+
+
+
