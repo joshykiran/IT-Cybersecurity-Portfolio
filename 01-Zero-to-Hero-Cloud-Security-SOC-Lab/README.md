@@ -383,26 +383,47 @@ This step focused on understanding CASB capabilities, licensing boundaries, and 
 
 ---
 
-## Step 11: Conditional Access Enforcement & Zero Trust Alignment
+## Step 11: Conditional Access Enforcement & Zero Trust Alignment**
 
-### 🔍 Overview
-Implemented identity-driven access controls aligned with Zero Trust.
+### 🔍 Overview  
+Implemented identity-driven access controls aligned with Zero Trust principles by replacing Microsoft Security Defaults with staged, policy-based Conditional Access enforcement.
 
-### 🛠️ What I Did
-- Disabled Microsoft Security Defaults
-- Created Conditional Access policies in report-only mode
-- Validated policies before enforcement
+This step established granular, risk-aware access control across users, devices, and cloud applications while minimizing business disruption through report-only validation.
 
-### 📚 What I Learned
-- Conditional Access enforces Zero Trust dynamically
-- Staged rollout prevents business disruption
 
-### 🧠 Skills Demonstrated
-- Identity governance
-- Zero Trust enforcement
+### 🛠️ What I Did  
+- Disabled **Microsoft Security Defaults** to enable advanced Conditional Access customization  
+- Imported **prebuilt Conditional Access base protection policies** from a GitHub repository and deployed them via **Microsoft Intune / Entra ID**  
+- Reviewed and staged multiple baseline policies (200–209 series), including:
+  - Require strong authentication
+  - Block high-risk sign-ins
+  - Enforce password changes for risky users
+  - Require trusted or compliant devices
+- Created a **custom Conditional Access policy** tailored to lab-specific data protection requirements  
+- Configured all policies in **report-only mode** to safely evaluate impact before enforcement  
+- Validated policy behavior using **Conditional Access insights and sign-in logs**  
+- Explicitly excluded emergency / break-glass accounts to prevent administrative lockout  
+
+
+### 📚 What I Learned  
+- Conditional Access is a core Zero Trust control that enforces access based on **identity, risk, device posture, and context**  
+- Disabling Security Defaults is required to implement granular Conditional Access strategies  
+- Importing proven baseline policies accelerates secure deployment while reducing configuration errors  
+- Report-only mode is critical for safely testing identity controls in production-like environments  
+- Proper exclusions are essential to avoid accidental tenant lockouts  
+
+
+### 🧠 Skills Demonstrated  
+- Microsoft Entra ID Conditional Access administration  
+- Zero Trust identity and access control design  
+- Conditional Access policy staging and validation  
+- Secure baseline policy adoption from GitHub  
+- Custom policy creation and risk-based enforcement  
+- Identity security troubleshooting and audit analysis  
 
 ![Microsoft Defender security overview](./evidence/S88.png)
-![Screenshot 90](./evidence/Screenshot%20(90).png)
+![Security configuration screenshot](./evidence/Screenshot%20(103)%20-%20Copy.png)
+
 
 
 ---
