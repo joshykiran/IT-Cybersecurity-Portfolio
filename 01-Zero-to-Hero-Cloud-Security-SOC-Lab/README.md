@@ -145,6 +145,7 @@ This step established the core identity, email, collaboration, and device-manage
 ![DNS Authorization via Cloudflare](./evidence/Screenshot-13.jpg)
 ![Domain and DNS verification](./evidence/Screenshot%20(24)%20-%20Copy.png)
 
+
 ---
 
 
@@ -180,6 +181,7 @@ This step converted the tenant into an **automated, policy-driven identity platf
 
 ![Domain and DNS configuration confirmation](./evidence/Screenshot%20(81)%20-%20Copy.jpg)
 
+
 ---
 
 ## Step 4: Intune Enrollment & Windows Autopilot Configuration
@@ -200,7 +202,9 @@ Secured endpoints from first boot using Intune and Autopilot.
 - Endpoint provisioning
 - Windows Autopilot
 
+
 ![Security configuration evidence](./evidence/6.png)
+
 
 
 ---
@@ -221,7 +225,9 @@ Hardened endpoints using CIS-aligned security baselines.
 - Endpoint hardening
 - Policy management
 
+
 ![Domain DNS propagation status](./evidence/Screenshot%20(82)%20-%20Copy.jpg)
+
 
 ---
 ## Step 6: Defender for Endpoint & XDR Integration
@@ -327,6 +333,7 @@ Strengthened email security against phishing and malware.
 ![Screenshot 67](./evidence/Screenshot%20(67)%20-%20Copy.jpg)
 ![Screenshot 68](./evidence/Screenshot%20(68)%20-%20Copy.jpg)
 
+
 ---
 
 ## Step 10: Defender for Cloud Apps (CASB) & SaaS Security
@@ -351,6 +358,7 @@ Improved SaaS visibility and reduced shadow IT risk.
 ![Microsoft 365 domain verification](./evidence/Screenshot%20(69)%20-%20Copy.jpg)
 ![Screenshot 71](./evidence/Screenshot%20(71)%20-%20Copy.jpg)
 
+
 ---
 
 ## Step 11: Conditional Access Enforcement & Zero Trust Alignment
@@ -373,6 +381,7 @@ Implemented identity-driven access controls aligned with Zero Trust.
 
 ![Microsoft Defender security overview](./evidence/S88.png)
 ![Screenshot 90](./evidence/Screenshot%20(90).png)
+
 
 ---
 
@@ -401,6 +410,7 @@ Deployed Microsoft Sentinel using Terraform with an enterprise-style workflow.
 ![Screenshot 118](./evidence/Screenshot%20(118)%20-%20Copy.jpg)
 ![Screenshot 120](./evidence/Screenshot%20(120)%20-%20Copy.jpg)
 ![Screenshot 121](./evidence/Screenshot%20(121)%20-%20Copy.jpg)
+
 
 ---
 
