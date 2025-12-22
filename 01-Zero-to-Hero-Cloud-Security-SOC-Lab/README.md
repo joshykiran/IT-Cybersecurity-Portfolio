@@ -336,27 +336,49 @@ Strengthened email security against phishing and malware.
 
 ---
 
-## Step 10: Defender for Cloud Apps (CASB) & SaaS Security
+## Step 10: Microsoft Defender for Cloud Apps (CASB) & SaaS Security
 
 ### 🔍 Overview
-Improved SaaS visibility and reduced shadow IT risk.
+Improved SaaS visibility and governance by leveraging Microsoft Defender for Cloud Apps to assess cloud application risk, identify shadow IT, and apply app-level access decisions.
+
+This step focused on understanding CASB capabilities, licensing boundaries, and integration dependencies with Defender for Endpoint.
+
 
 ### 🛠️ What I Did
-- Connected Microsoft 365 and Entra ID
-- Enabled Cloud Discovery
-- Reviewed unsanctioned applications
-- Integrated Defender for Endpoint
+- Accessed the **Cloud App Catalog** to review Microsoft-assessed risk scores across SaaS applications
+- Evaluated application security, compliance, and legal metadata
+- Tagged selected applications as **Sanctioned** and **Unsanctioned**
+- Validated Defender for Cloud Apps integration settings with **Microsoft Defender for Endpoint**
+- Documented enforcement prerequisites and feature limitations within a trial environment
+
+
+### ⚠️ Licensing & Environment Constraints
+- Operated within a **trial / limited-license tenant**
+- Full Cloud Discovery automation and enforcement require:
+  - Microsoft 365 E5 or EMS E5
+- Certain features (continuous discovery, automatic blocking, governance actions) were not fully available
+- App tagging and catalog analysis remained accessible and functional
+
 
 ### 📚 What I Learned
-- CASB provides governance across SaaS platforms
-- Shadow IT increases data leakage risk
+- CASB provides centralized governance over SaaS usage and shadow IT
+- Defender for Cloud Apps relies heavily on **Defender for Endpoint integration** for enforcement
+- App states (Sanctioned / Unsanctioned / Monitored) directly influence access behavior
+- Licensing determines **capability depth**, not just UI visibility
+- CASB policies can automate security responses to risky user and app behavior
+
 
 ### 🧠 Skills Demonstrated
-- CASB
-- SaaS risk assessment
+- CASB fundamentals (Microsoft Defender for Cloud Apps)
+- SaaS risk assessment and governance
+- Shadow IT visibility concepts
+- Security feature licensing analysis
+- Defender for Endpoint and CASB integration awareness
+
 
 ![Microsoft 365 domain verification](./evidence/Screenshot%20(69)%20-%20Copy.jpg)
 ![Screenshot 71](./evidence/Screenshot%20(71)%20-%20Copy.jpg)
+![Security configuration screenshot](./evidence/Screenshot%20(50).png)
 
 
 ---
