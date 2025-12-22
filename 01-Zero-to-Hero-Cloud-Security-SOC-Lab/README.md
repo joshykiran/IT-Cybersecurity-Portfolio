@@ -308,11 +308,10 @@ Secured a personal Android device using Android Enterprise Work Profile to prote
 </p>
 
 
-**Intune Device Onboarding Dashboard**
-
-This dashboard confirms successful onboarding and active management of Windows and Android devices in Microsoft Intune, providing a centralized view of enrolled platforms and validating that device enrollment and management policies are working as intended.
-
 ![Intune Device Onboarding Dashboard](./evidence/91.png)
+
+*Intune Device Onboarding Dashboard*
+
 
 
 ---
