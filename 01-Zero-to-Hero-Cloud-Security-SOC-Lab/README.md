@@ -421,7 +421,7 @@ This step established granular, risk-aware access control across users, devices,
 - Custom policy creation and risk-based enforcement  
 - Identity security troubleshooting and audit analysis  
 
-![Microsoft Defender security overview](./evidence/S88.png)
+![Security configuration screenshot](./evidence/Screenshot%20(88)%20-%20Copy.png)
 ![Security configuration screenshot](./evidence/Screenshot%20(103)%20-%20Copy.png)
 
 
