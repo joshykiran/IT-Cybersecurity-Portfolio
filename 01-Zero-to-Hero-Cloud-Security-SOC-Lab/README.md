@@ -490,39 +490,7 @@ Configured Azure Entra ID authentication
 
 ---
 
-## Step 13: SIEM Deployment with Infrastructure as Code (Microsoft Sentinel)
-
-🔍 **Overview**  
-Deployed Microsoft Sentinel using Terraform with a GitHub-driven Infrastructure as Code workflow.
-
-This step focused on **resource deployment**, not detections or analytics tuning.
-
-🛠️ **What I Did**
-- Connected the GitHub repository to Terraform Cloud
-- Initialized and executed the Terraform workflow
-- Deployed core SIEM infrastructure:
-  - Log Analytics Workspace
-  - Microsoft Sentinel instance
-- Verified successful resource deployment in the Azure portal
-
-📚 **What I Learned**
-- Terraform enables repeatable and auditable SIEM provisioning
-- Sentinel is tightly coupled with Log Analytics architecture
-- GitHub-based workflows support controlled infrastructure changes
-
-🧠 **Skills Demonstrated**
-- Terraform execution workflows  
-- Azure resource provisioning  
-- SIEM deployment architecture  
-- Infrastructure as Code fundamentals
-  
-
-
-
-
----
-
-## Step 14: Terraform Cloud Workspace Setup & Variable Configuration**
+## Step 13: Terraform Cloud Workspace Setup & Variable Configuration**
 
 ### 🔍 Overview  
 Prepared Terraform Cloud to execute the Sentinel Infrastructure-as-Code deployment by configuring the workspace, connecting it to the GitHub repository, and defining required environment variables.
@@ -556,7 +524,7 @@ This step ensured the Terraform workflow could run successfully before any resou
 
 ---
 
-EVDCE
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(126)%20-%20Copy.jpg)
 
 ---
 
