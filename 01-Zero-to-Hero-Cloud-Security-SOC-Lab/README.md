@@ -16,8 +16,7 @@ Rather than focusing only on configuration, this project emphasizes:
 
 The environment progresses from foundational identity and endpoint security to **full SIEM and SOAR-driven operations**, reflecting how modern SOC teams detect, analyze, enrich, and respond to threats in production environments.
 
-
-Rather than treating tools in isolation, this project demonstrates how modern security platforms integrate end-to-end across:
+Rather than treating tools in isolation, this project demonstrates how modern security platforms integrate end-to-end across the full security lifecycle, including:
 
 - Identity and access control
 - Endpoint and mobile device security
@@ -81,6 +80,29 @@ By completing this lab, I successfully:
 
 ## Implementation Journey
 
+- **Custom Domain & DNS Foundation**  
+  → Cloudflare-managed DNS and Microsoft 365 trust layer  
+
+- **Enterprise Licensing & Tenant Security**  
+  → Microsoft 365, EMS, and Defender capability enablement  
+
+- **Identity Automation & Dynamic Groups**  
+  → Auto-licensing, Conditional Access targeting  
+
+- **Endpoint & Mobile Device Management (Intune)**  
+  → Windows Autopilot and Android Work Profile  
+
+- **CIS-Aligned Endpoint Hardening**  
+  → Security baselines, ASR rules, compliance  
+
+- **Defender XDR Enablement**  
+  → Endpoint, email, and SaaS telemetry  
+
+- **Centralized SIEM & SOAR (Microsoft Sentinel)**  
+  → Detection, enrichment, visualization, and response  
+
+
+---
 
 
 ## Step 1: Domain Purchase & DNS Foundation (Cloudflare)
@@ -597,7 +619,7 @@ This step created the conditions required to observe brute-force activity and va
 
 
 ### 🛠️ What I Did  
-- Deployed a **Windows virtual machine** in Azure (VM creation performed in earlier step)
+- Deployed and configured a Windows virtual machine in Azure for attack simulation
 - Retrieved the VM’s **public IP address**
 - Modified the **Network Security Group (NSG)** to:
   - Remove restrictive inbound rules
@@ -735,6 +757,8 @@ This step completed the SOC lifecycle by enabling **detect → enrich → visual
 - Sentinel alerts now automatically trigger response workflows
 - Brute-force detections initiate **automated containment**
 - The environment supports full **SIEM + SOAR operations**
+- Demonstrated full **SIEM → SOAR → containment** workflow without manual intervention
+
 
 
 ### 📚 What I Learned  
