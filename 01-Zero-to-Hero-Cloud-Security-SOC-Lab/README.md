@@ -540,43 +540,38 @@ EVDCE
 
 ---
 
-## Step 15: Sentinel Log Ingestion & Security Connector Enablement**
+## Step 15: Sentinel Log Ingestion & Security Connector Enablement
 
-### 🔍 Overview  
-Prepared Microsoft Sentinel to ingest security telemetry by enabling core log ingestion pipelines and integrating Microsoft 365 and Defender data sources.
+🔍 Overview  
+Prepared Microsoft Sentinel to ingest security telemetry by enabling core data connectors and integrating Microsoft security services.
 
-This step positioned Sentinel as the centralized SIEM/XDR platform before exposing any workloads.
+This step established Sentinel as the centralized SIEM/XDR platform before onboarding any compute workloads.
 
-
-### 🛠️ What I Did  
-- Navigated to **Microsoft Sentinel → Content Hub**
-- Installed and configured **Windows Security Events via Azure Monitor Agent (AMA)**
-- Prepared Sentinel to create **Data Collection Rules (DCRs)** for monitored workloads
-- Enabled and validated integrations with Microsoft security services, including:
-  - Microsoft Defender for Endpoint  
-  - Microsoft Defender XDR  
-  - Microsoft Defender for Office 365  
-  - Microsoft Defender for Cloud  
-  - Microsoft Defender for Cloud Apps  
-  - Microsoft Entra ID & Entra ID Protection  
+🛠️ What I Did  
+- Navigated to Microsoft Sentinel → Content Hub  
+- Installed and configured Windows Security Events using Azure Monitor Agent (AMA)  
+- Prepared Sentinel for platform-managed Data Collection Rules (DCRs)  
+- Enabled integrations with Microsoft security services, including:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender XDR
+  - Microsoft Defender for Office 365
+  - Microsoft Defender for Cloud
+  - Microsoft Defender for Cloud Apps
+  - Microsoft Entra ID & Entra ID Protection
   - Microsoft 365  
-- Verified that all connected services route telemetry into the **Log Analytics Workspace**
-- Confirmed end-to-end ingestion readiness prior to VM deployment
+- Verified connector configuration and ingestion readiness prior to VM deployment  
 
+📚 What I Learned  
+- Sentinel aggregates telemetry across Microsoft’s security ecosystem  
+- AMA simplifies log onboarding using managed DCRs  
+- Enabling connectors early prevents telemetry gaps during attacks  
 
-### 📚 What I Learned  
-- Sentinel acts as the aggregation layer for Microsoft’s security ecosystem  
-- AMA and DCRs provide granular control over log collection  
-- Enabling connectors early ensures no loss of telemetry during attacks  
-- SIEM value depends on *breadth and quality* of ingested signals  
-
-
-### 🧠 Skills Demonstrated  
+🧠 Skills Demonstrated  
 - Microsoft Sentinel connector configuration  
 - SIEM & XDR integration design  
 - Log ingestion architecture  
-- Azure Monitor Agent (AMA) & DCR planning  
-- Security telemetry validation  
+- Azure Monitor Agent (AMA) fundamentals  
+
 
 ---
 EVDCE
