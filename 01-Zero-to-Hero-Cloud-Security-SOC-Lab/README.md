@@ -449,20 +449,20 @@ This step focused on tooling setup, repository preparation, and configuring Azur
 
 🛠️ **What I Did**
 
-### Terraform Setup Workflow
-- ✅ Installed required tooling  
+
+Installed required tooling  
   - Git  
   - Visual Studio Code  
 
-- ✅ Cloned the GitHub repository  
+Cloned the GitHub repository  
   - Reviewed Terraform configuration files  
   - Extracted and copied provided IaC files into the repository  
 
-- ✅ Prepared Terraform Cloud  
+Prepared Terraform Cloud  
   - Created a Terraform Cloud workspace  
   - Identified required Azure credentials for deployment  
 
-- ✅ Configured Azure Entra ID authentication  
+Configured Azure Entra ID authentication  
   - Created an App Registration  
   - Collected Tenant ID and Client ID  
   - Generated a Client Secret  
