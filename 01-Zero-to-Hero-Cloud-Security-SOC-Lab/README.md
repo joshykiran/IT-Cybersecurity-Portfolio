@@ -72,7 +72,7 @@ By completing this lab, I successfully:
 
 ## Implementation Journey
 
----
+
 
 ## Step 1: Domain Purchase & DNS Foundation (Cloudflare)
 
