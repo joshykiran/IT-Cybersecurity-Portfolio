@@ -754,7 +754,7 @@ This step completed the SOC lifecycle by enabling **detect → enrich → visual
 ---
 
 ![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(331)%20-%20Copy.jpg)
-![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(340)%20-%20Copy.jpg)
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(340)%20-%20Copy.png)
 
 
 ---
