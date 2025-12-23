@@ -440,94 +440,114 @@ This step established granular, risk-aware access control across users, devices,
 
 ---
 
-## Step 12: Identity Hardening & Secure Automation Preparation (Azure Entra ID)**
+## Step 12: Terraform Setup & Azure Authentication Preparation
 
-### 🔍 Overview  
-Prepared the Azure tenant for secure Infrastructure as Code (IaC) by replacing default security settings with enterprise-ready identity controls and service-principal–based authentication.
+🔍 **Overview**  
+Prepared the local and cloud-based Terraform workflow required to deploy Microsoft Sentinel using Infrastructure as Code.
 
-This step ensured Terraform could deploy resources securely using least-privilege, non-interactive access.
+This step focused on tooling setup, repository preparation, and configuring Azure authentication required for Terraform execution.
 
-### 🛠️ What I Did  
-- Disabled **Microsoft Security Defaults** in Azure Entra ID to allow custom Conditional Access and automation  
-- Created an **App Registration** for Terraform-based automation  
-- Generated a **Client Secret** for secure, non-interactive authentication  
-- Assigned **Contributor RBAC** role at the subscription scope  
-- Verified tenant ID, subscription ID, and permission alignment  
+🛠️ **What I Did**
 
-### 📚 What I Learned  
-- Security Defaults conflict with advanced automation scenarios  
-- Service principals are required for secure IaC workflows  
-- Identity must be hardened *before* deploying security platforms  
+### Terraform Setup Workflow
+- ✅ Installed required tooling  
+  - Git  
+  - Visual Studio Code  
 
-### 🧠 Skills Demonstrated  
-- Azure Entra ID administration  
-- Identity governance and RBAC  
-- Secure automation design  
+- ✅ Cloned the GitHub repository  
+  - Reviewed Terraform configuration files  
+  - Extracted and copied provided IaC files into the repository  
+
+- ✅ Prepared Terraform Cloud  
+  - Created a Terraform Cloud workspace  
+  - Identified required Azure credentials for deployment  
+
+- ✅ Configured Azure Entra ID authentication  
+  - Created an App Registration  
+  - Collected Tenant ID and Client ID  
+  - Generated a Client Secret  
+  - Assigned Contributor RBAC role at the subscription scope  
+
+📚 **What I Learned**
+- Terraform Cloud requires Azure service principal authentication
+- IaC workflows combine local tooling, source control, and cloud execution
+- Identity configuration is a prerequisite for Terraform execution
+
+🧠 **Skills Demonstrated**
+- Git and GitHub workflows  
+- Terraform Cloud setup  
+- Azure Entra ID app registrations  
+- Secure automation authentication
+
+
+
+EVDCE
 
 
 ---
 
-## Step 13: SIEM Deployment with Infrastructure as Code (Microsoft Sentinel)**
+## Step 13: SIEM Deployment with Infrastructure as Code (Microsoft Sentinel)
 
-### 🔍 Overview  
-Deployed Microsoft Sentinel using Terraform with an enterprise-style GitHub-driven workflow.
+🔍 **Overview**  
+Deployed Microsoft Sentinel using Terraform with a GitHub-driven Infrastructure as Code workflow.
 
-This step focused on **infrastructure deployment**, not tuning or detection logic.
+This step focused on **resource deployment**, not detections or analytics tuning.
 
-### 🛠️ What I Did  
-- Installed required tooling:
-  - Git
-  - Visual Studio Code
-- Cloned the Terraform **Sentinel deployment repository** from GitHub  
-- Downloaded and extracted provided IaC files  
-- Copied extracted Terraform files into the cloned repository  
-- Reviewed project structure and validated file placement  
-- Committed and pushed changes back to GitHub  
-- Connected **Terraform Cloud** to the repository  
-- Initialized and executed Terraform workflow to deploy:
-  - Log Analytics Workspace  
-  - Microsoft Sentinel instance  
-- Verified successful resource deployment in Azure  
+🛠️ **What I Did**
+- Connected the GitHub repository to Terraform Cloud
+- Initialized and executed the Terraform workflow
+- Deployed core SIEM infrastructure:
+  - Log Analytics Workspace
+  - Microsoft Sentinel instance
+- Verified successful resource deployment in the Azure portal
 
-### 📚 What I Learned  
-- Git-based workflows are critical for controlled IaC deployments  
-- Terraform enables repeatable, auditable SIEM provisioning  
-- Sentinel is tightly coupled with Log Analytics architecture  
+📚 **What I Learned**
+- Terraform enables repeatable and auditable SIEM provisioning
+- Sentinel is tightly coupled with Log Analytics architecture
+- GitHub-based workflows support controlled infrastructure changes
 
-### 🧠 Skills Demonstrated  
-- Terraform fundamentals  
-- GitHub-based IaC workflows  
+🧠 **Skills Demonstrated**
+- Terraform execution workflows  
 - Azure resource provisioning  
 - SIEM deployment architecture  
+- Infrastructure as Code fundamentals
+  
 
+EVDNCE
 
 ---
 
-## Step 14: Terraform Variable Configuration & Workspace Readiness
+## Step 14: Terraform Cloud Workspace Setup & Variable Configuration**
 
-🔍 Overview  
-Prepared the Terraform Cloud workspace for Sentinel deployment by configuring required variables and validating execution readiness.
+### 🔍 Overview  
+Prepared Terraform Cloud to execute the Sentinel Infrastructure-as-Code deployment by configuring the workspace, connecting it to the GitHub repository, and defining required environment variables.
 
-This step ensured the infrastructure was properly configured before running any Terraform plans or applies.
+This step ensured the Terraform workflow could run successfully before any resources were deployed.
 
-🛠️ What I Did  
-- Created a Terraform Cloud workspace for the Sentinel deployment  
-- Connected the workspace to the GitHub repository  
-- Configured required Terraform variables:
-  - Resource group name
-  - Log Analytics workspace name  
-- Validated variable values against the Azure subscription and environment  
-- Confirmed the workspace was ready for Terraform execution  
 
-📚 What I Learned  
-- Terraform variables define environment-specific deployment behavior  
-- Proper variable configuration is required before executing Terraform workflows  
-- Terraform Cloud centralizes and secures IaC execution  
+### 🛠️ What I Did  
+- Created a **Terraform Cloud workspace** for the Sentinel deployment  
+- Connected the workspace to the **GitHub repository** containing the Terraform code  
+- Configured required Terraform variables, including:
+  - Azure subscription ID  
+  - Tenant ID  
+  - Client ID  
+  - Client secret  
+- Verified variable values matched the Azure environment  
+- Confirmed the workspace was ready for **Terraform plan and apply** execution  
 
-🧠 Skills Demonstrated  
+
+### 📚 What I Learned  
+- Terraform Cloud requires explicit environment variables to authenticate with Azure  
+- Proper workspace configuration is mandatory before executing IaC pipelines  
+- Separating code from variables improves security and reusability  
+
+
+### 🧠 Skills Demonstrated  
 - Terraform Cloud workspace management  
-- Variable-based configuration  
-- Infrastructure deployment readiness  
+- Secure variable handling for IaC  
+- Infrastructure deployment readiness validation  
+
 
 ---
 
