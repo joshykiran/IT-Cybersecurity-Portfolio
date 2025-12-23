@@ -96,7 +96,7 @@ Established a secure DNS foundation to support identity, email, and Zero Trust s
 
 ---
 
-## Step 2: Secure Microsoft 365 Tenant Foundation with Custom Domain, Cloudflare DNS & Enterprise Licensing**
+## Step 2: Secure Microsoft 365 Tenant Foundation with Custom Domain, Cloudflare DNS & Enterprise Licensing
 
 ### 🔍 Overview  
 Built a security-first Microsoft 365 tenant by integrating a custom domain, enforcing strong identity controls, configuring Cloudflare-managed DNS, and enabling enterprise-grade security through strategic licensing.
@@ -158,7 +158,7 @@ This step established the core identity, email, collaboration, and device-manage
 ---
 
 
-## Step 3: Identity Automation with Dynamic Groups, Auto-Licensing & Break-Glass Access**
+## Step 3: Identity Automation with Dynamic Groups, Auto-Licensing & Break-Glass Access
 
 ### 🔍 Overview  
 Implemented scalable identity automation using dynamic Microsoft Entra ID groups, enabling automatic license assignment and secure emergency access.
@@ -262,7 +262,7 @@ Enabled endpoint detection and response and validated XDR telemetry.
 
 ---
 
-## Step 7: Windows Enterprise Endpoint Onboarding & Intune Validation**
+## Step 7: Windows Enterprise Endpoint Onboarding & Intune Validation
 
 ### 🔍 Overview  
 Onboarded and secured a Microsoft-provided Windows Enterprise device using Microsoft Intune to validate endpoint management and security enforcement.
@@ -288,7 +288,7 @@ Onboarded and secured a Microsoft-provided Windows Enterprise device using Micro
 
 ---
 
-## Step 8: Android BYOD Onboarding with Intune & Work Profile Protection**
+## Step 8: Android BYOD Onboarding with Intune & Work Profile Protection
 
 ### 🔍 Overview  
 Secured a personal Android device using Android Enterprise Work Profile to protect corporate data while preserving user privacy.
@@ -404,7 +404,7 @@ This step focused on understanding CASB capabilities, licensing boundaries, and 
 
 ---
 
-## Step 11: Conditional Access Enforcement & Zero Trust Alignment**
+## Step 11: Conditional Access Enforcement & Zero Trust Alignment
 
 ### 🔍 Overview  
 Implemented identity-driven access controls aligned with Zero Trust principles by replacing Microsoft Security Defaults with staged, policy-based Conditional Access enforcement.
@@ -499,7 +499,7 @@ Configured Azure Entra ID authentication
 
 ---
 
-## Step 13: Terraform Cloud Workspace Setup & Variable Configuration**
+## Step 13: Terraform Cloud Workspace Setup & Variable Configuration
 
 ### 🔍 Overview  
 Prepared Terraform Cloud to execute the Sentinel Infrastructure-as-Code deployment by configuring the workspace, connecting it to the GitHub repository, and defining required environment variables.
@@ -579,7 +579,7 @@ This step established Sentinel as the centralized SIEM/XDR platform before onboa
 
 
 
-## Step 15: Attack Surface Creation & Log Generation (Windows VM)**
+## Step 15: Attack Surface Creation & Log Generation (Windows VM)
 
 ### 🔍 Overview  
 Deployed and intentionally exposed a Windows virtual machine to simulate real-world attack behavior and generate authentic security telemetry for Sentinel analysis.
@@ -624,7 +624,7 @@ This step created the conditions required to observe brute-force activity and va
 
 
 
-## Step 16: Threat Detection, GeoIP Enrichment & Attack Visualization (Microsoft Sentinel)**
+## Step 16: Threat Detection, GeoIP Enrichment & Attack Visualization (Microsoft Sentinel)
 
 ### 🔍 Overview  
 Enabled threat detection and enriched attack telemetry in Microsoft Sentinel to identify, analyze, and visualize real-world brute-force activity against an exposed Windows virtual machine.
