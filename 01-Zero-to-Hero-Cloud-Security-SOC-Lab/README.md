@@ -562,7 +562,9 @@ This step established Sentinel as the centralized SIEM/XDR platform before onboa
 
 
 ---
-EVDCE
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(163)%20-%20Copy.jpg)
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(169)%20-%20Copy.jpg)
+
 
 ---
 
