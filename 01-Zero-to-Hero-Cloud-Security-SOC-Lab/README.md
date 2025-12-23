@@ -607,7 +607,7 @@ This step created the conditions required to observe brute-force activity and va
 - Attack simulation and telemetry generation  
 - SOC-style validation of attack surface exposure  
 
-
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(216)%20-%20Copy.jpg)
 ![Screenshot 598](./evidence/Screenshot%20(598)%20-%20Copy.png)
 
 ---
@@ -669,8 +669,14 @@ This step transformed raw security logs into actionable intelligence using KQL, 
 - Security operations (SOC) workflow fundamentals  
 
 ---
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(227)%20-%20Copy.jpg)
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(233)%20-%20Copy.jpg)
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(260)%20-%20Copy.jpg)
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(273)%20-%20Copy.jpg)
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(311)%20-%20Copy.jpg)
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(331)%20-%20Copy.jpg)
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(332)%20-%20Copy.jpg)
 
-EVDCE
 
 ---
 
@@ -701,57 +707,5 @@ It demonstrates:
 
 
 
- GeoIP 
-
-![Screenshot 163](./evidence/Screenshot%20(163)%20-%20Copy.jpg)
-![Screenshot 227](./evidence/Screenshot%20(227)%20-%20Copy.jpg)
-![Screenshot 229](./evidence/Screenshot%20(229)%20-%20Copy.jpg)
-![Screenshot 277](./evidence/Screenshot%20(277)%20-%20Copy.jpg)
-![Screenshot 311](./evidence/Screenshot%20(311)%20-%20Copy.jpg)
 
 ---
-
-SOAR Playbooks & Automated Incident Response
-
-### 🔍 Overview
-Automated incident containment using SOAR.
-
-### 🛠️ What I Did
-- Built Logic App playbook
-- Triggered Azure Automation Runbook
-- Blocked attacker IP using NSG rules
-
-![Screenshot 230](./evidence/Screenshot%20(230)%20-%20Copy.jpg)
-![Screenshot 232](./evidence/Screenshot%20(232)%20-%20Copy.jpg)
-![Screenshot 233](./evidence/Screenshot%20(233)%20-%20Copy.jpg)
-![Screenshot 236](./evidence/Screenshot%20(236)%20-%20Copy.jpg)
-![Screenshot 237](./evidence/Screenshot%20(237)%20-%20Copy.jpg)
-![Screenshot 260](./evidence/Screenshot%20(260)%20-%20Copy.jpg)
-![Screenshot 273](./evidence/Screenshot%20(273)%20-%20Copy.jpg)
-![Screenshot 331](./evidence/Screenshot%20(331)%20-%20Copy.jpg)
-![Screenshot 2025-12-19 153537](./evidence/Screenshot%202025-12-19%20153537.png)
-
-
----
-
-
-
-12
-![Security configuration screenshot](./evidence/S106%20-%20Copy.png)
-![Screenshot 110](./evidence/Screenshot%20(110)%20-%20Copy.jpg)
-![Screenshot 113](./evidence/Screenshot%20(113)%20-%20Copy.jpg)
-![Screenshot 118](./evidence/Screenshot%20(118)%20-%20Copy.jpg)
-![Screenshot 120](./evidence/Screenshot%20(120)%20-%20Copy.jpg)
-![Screenshot 121](./evidence/Screenshot%20(121)%20-%20Copy.jpg)
-
-13
-![Screenshot 124](./evidence/Screenshot%20(124)%20-%20Copy.jpg)
-![Screenshot 126](./evidence/Screenshot%20(126)%20-%20Copy.jpg)
-![Screenshot 127](./evidence/Screenshot%20(127)%20-%20Copy.jpg)
-![Screenshot 128](./evidence/Screenshot%20(128)%20-%20Copy.jpg)
-![Screenshot 159](./evidence/Screenshot%20(159)%20-%20Copy.jpg)
-![Screenshot 160](./evidence/Screenshot%20(160)%20-%20Copy.jpg)
-
-
-
-
