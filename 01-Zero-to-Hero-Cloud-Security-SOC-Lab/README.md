@@ -480,8 +480,12 @@ Configured Azure Entra ID authentication
 - Secure automation authentication
 
 
-
-EVDCE
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(110)%20-%20Copy.png)
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(120)%20-%20Copy.jpg)
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(121)%20-%20Copy.jpg)
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(122)%20-%20Copy.jpg)
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(123)%20-%20Copy.jpg)
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(124)%20-%20Copy.jpg)
 
 
 ---
@@ -512,12 +516,7 @@ This step focused on **resource deployment**, not detections or analytics tuning
 - SIEM deployment architecture  
 - Infrastructure as Code fundamentals
   
-![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(110)%20-%20Copy.png)
-![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(120)%20-%20Copy.png)
-![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(121)%20-%20Copy.png)
-![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(122)%20-%20Copy.png)
-![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(123)%20-%20Copy.png)
-![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(124)%20-%20Copy.png)
+
 
 
 
