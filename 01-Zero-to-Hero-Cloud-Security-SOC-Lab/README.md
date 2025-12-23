@@ -528,7 +528,7 @@ This step ensured the Terraform workflow could run successfully before any resou
 
 ---
 
-## Step 15: Sentinel Log Ingestion & Security Connector Enablement
+## Step 14: Sentinel Log Ingestion & Security Connector Enablement
 
 🔍 Overview  
 Prepared Microsoft Sentinel to ingest security telemetry by enabling core data connectors and integrating Microsoft security services.
@@ -570,7 +570,7 @@ This step established Sentinel as the centralized SIEM/XDR platform before onboa
 
 
 
-## Step 16: Attack Surface Creation & Log Generation (Windows VM)**
+## Step 15: Attack Surface Creation & Log Generation (Windows VM)**
 
 ### 🔍 Overview  
 Deployed and intentionally exposed a Windows virtual machine to simulate real-world attack behavior and generate authentic security telemetry for Sentinel analysis.
@@ -615,7 +615,7 @@ This step created the conditions required to observe brute-force activity and va
 
 
 
-## Step 17: Threat Detection, GeoIP Enrichment & Attack Visualization (Microsoft Sentinel)**
+## Step 16: Threat Detection, GeoIP Enrichment & Attack Visualization (Microsoft Sentinel)**
 
 ### 🔍 Overview  
 Enabled threat detection and enriched attack telemetry in Microsoft Sentinel to identify, analyze, and visualize real-world brute-force activity against an exposed Windows virtual machine.
