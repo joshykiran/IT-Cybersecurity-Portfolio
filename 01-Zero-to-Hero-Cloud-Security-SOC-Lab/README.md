@@ -1,4 +1,5 @@
-# 📘 Project 01 — Cloud-Centric Security Lab with SOC Integration
+# 📘 Project 01 — Cloud-Centric Security Lab with SOC & SIEM Integration
+
 
 ---
 
@@ -6,7 +7,15 @@
 
 This project documents my **hands-on experience designing, securing, monitoring, and automating a cloud-first enterprise security environment** using Microsoft security technologies and Infrastructure as Code (IaC).
 
-The lab was deliberately structured to simulate how **real-world organizations design and operate a Security Operations Center (SOC)**, focusing not only on configuration, but on **security reasoning, visibility, and response**.
+The lab was deliberately structured to simulate how **real-world organizations design and operate a Security Operations Center (SOC)**.  
+Rather than focusing only on configuration, this project emphasizes:
+
+- Security reasoning and design decisions  
+- End-to-end visibility across identity, endpoints, and cloud services  
+- Threat detection, investigation, and response workflows  
+
+The environment progresses from foundational identity and endpoint security to **full SIEM and SOAR-driven operations**, reflecting how modern SOC teams detect, analyze, enrich, and respond to threats in production environments.
+
 
 Rather than treating tools in isolation, this project demonstrates how modern security platforms integrate end-to-end across:
 
@@ -629,72 +638,142 @@ This step created the conditions required to observe brute-force activity and va
 ### 🔍 Overview  
 Enabled threat detection and enriched attack telemetry in Microsoft Sentinel to identify, analyze, and visualize real-world brute-force activity against an exposed Windows virtual machine.
 
-This step transformed raw security logs into actionable intelligence using KQL, watchlists, and visual workbooks.
+This step transformed raw security logs into actionable intelligence using KQL queries, watchlists, and custom workbooks.
+
 
 
 ### 🛠️ What I Did  
 
 #### Detection & Log Validation
-- Queried **SecurityEvent** logs in the Log Analytics Workspace
-- Filtered failed authentication attempts using **Event ID 4625**
-- Confirmed Sentinel was ingesting real attack data from the VM
-- Validated attacker IP addresses and timestamps using KQL
+- Queried **SecurityEvent** logs in the Log Analytics Workspace  
+- Filtered failed authentication attempts using **Event ID 4625**  
+- Confirmed Sentinel was ingesting real attack data from the VM  
+- Validated attacker IP addresses, usernames, and timestamps using **KQL**
 
 #### GeoIP Enrichment
 - Downloaded and imported a **GeoIP CSV** as a Sentinel **Watchlist**
 - Configured watchlist settings:
-  - Alias: `geoip`
-  - Search key: `network`
-- Enriched security logs by correlating attacker IPs with geographic data
+  - **Alias:** `geoip`
+  - **Search key:** `network`
+- Enriched security logs by correlating attacker IPs with geographic metadata
 - Verified enriched fields including:
-  - Country
-  - City
-  - Latitude & longitude
+  - Country  
+  - City  
+  - Latitude & longitude  
 
 #### Attack Visualization
-- Created a custom **Microsoft Sentinel Workbook**
-- Removed default widgets and added a **Query-based visualization**
+- Created a **custom Microsoft Sentinel Workbook**
+- Removed default widgets and added **query-based visualizations**
 - Used advanced KQL to:
   - Aggregate failed RDP attempts
-  - Group attackers by geographic location
+  - Group attacks by geographic origin
 - Rendered a **global attack map** showing:
-  - Attack origin countries
+  - Attack source countries
   - Relative attack volume
-- Reviewed map configuration and query logic for accuracy
+- Reviewed visualization logic and query accuracy
 
 
 ### 📚 What I Learned  
-- Raw security logs gain value through enrichment and context  
-- Watchlists enable powerful correlations without external services  
-- KQL is essential for SOC-level threat analysis  
-- Visualization improves detection clarity and executive communication  
+- Raw security logs gain value through context and enrichment  
+- Watchlists enable powerful correlations without external APIs  
+- KQL is essential for SOC-level threat detection and investigation  
+- Visualization improves analyst efficiency and communication  
 
 
 ### 🧠 Skills Demonstrated  
 - Microsoft Sentinel threat detection  
 - KQL querying and log analysis  
 - GeoIP enrichment using watchlists  
-- SIEM data visualization and dashboards  
-- Security operations (SOC) workflow fundamentals  
+- SIEM data visualization  
+- SOC investigation workflows  
+
 
 ---
-![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(227)%20-%20Copy.jpg)
+
 ![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(233)%20-%20Copy.jpg)
 ![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(260)%20-%20Copy.jpg)
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(227)%20-%20Copy.jpg)
 ![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(273)%20-%20Copy.jpg)
 ![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(311)%20-%20Copy.jpg)
-![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(331)%20-%20Copy.jpg)
 ![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(332)%20-%20Copy.jpg)
 
 
 ---
 
 
+## Step 17: Automated Incident Response (SOAR) — Device Isolation
+
+### 🔍 Overview  
+Extended Microsoft Sentinel detections by implementing automated response actions (SOAR) using Azure Logic Apps and Sentinel automation rules.
+
+This step completed the SOC lifecycle by enabling **detect → enrich → visualize → respond** workflows.
+
+
+### 🛠️ What I Did  
+
+#### Sentinel Analytics Rule Automation
+- Navigated to **Microsoft Sentinel → Analytics**
+- Edited the previously created **RDP logon failure** analytics rule
+- Opened the **Automated response** tab
+- Created a new **automation rule**:
+  - **Trigger:** When alert is created
+  - **Condition:** Analytic rule name contains current rule
+  - **Action:** Run playbook (Logic App)
+
+#### Logic App (Playbook) Integration
+- Selected a **device isolation Logic App** as the response action
+- Validated and saved the automation rule after successful checks
+- Ensured the Sentinel resource group had permission to execute the playbook
+
+#### Azure Automation & VM Permissions
+- Granted required permissions to the **Azure Automation account**
+- Assigned access to the **resource group hosting the VM**
+- Verified automation could safely perform response actions
+
+
+### ✅ Outcome
+- Sentinel alerts now automatically trigger response workflows
+- Brute-force detections initiate **automated containment**
+- The environment supports full **SIEM + SOAR operations**
+
+
+### 📚 What I Learned  
+- Detection without response leaves security gaps  
+- Sentinel automation rules connect SIEM detections to SOAR actions  
+- RBAC design is critical for safe automation  
+- Automated response reduces mean time to containment (MTTC)
+
+
+### 🧠 Skills Demonstrated  
+- Microsoft Sentinel automation rules  
+- SOAR playbook integration (Logic Apps)  
+- Azure Automation RBAC configuration  
+- Automated incident response design  
+- End-to-end SOC workflow implementation  
+
+---
+
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(331)%20-%20Copy.jpg)
+![Intune Device Onboarding Dashboard](./evidence/Screenshot%20(340)%20-%20Copy.jpg)
+
+
+---
+
+
+
 ## Project Summary
 
-This project demonstrates my ability to **design, secure, monitor, detect, enrich, and analyze security events** in a modern cloud environment using Microsoft’s security ecosystem.
+This project demonstrates my ability to **design, secure, monitor, detect, enrich, visualize, and respond to security events** in a modern cloud environment using Microsoft’s security ecosystem.
 
-Across the lab, I moved from foundational identity and endpoint security to full SOC-style visibility and analysis, validating how attacks are detected, contextualized, and investigated in real time.
+Across the lab, I progressed from identity hardening and endpoint protection to **SOC-style centralized logging, threat detection, GeoIP enrichment, visualization, and automated incident response (SOAR)**.
+
+The result is a realistic, end-to-end security implementation that validates:
+- How attacks are generated and detected
+- How raw telemetry is enriched into actionable intelligence
+- How incidents are investigated and automatically contained
+
+This project reflects practical SOC workflows and operational thinking aligned with **SOC Analyst, Cloud Security, and Junior Security Engineer roles**.
+
 
 The final environment reflects:
 - Identity-first and Zero Trust–aligned access control
@@ -717,8 +796,6 @@ This project reflects my readiness for **SOC Analyst, Cloud Security, and Junior
 - A disciplined, security-operations mindset  
 
 Rather than focusing solely on tools, this lab emphasizes **how security teams think, investigate, and respond** in real-world cloud environments.
-
-
 
 
 
