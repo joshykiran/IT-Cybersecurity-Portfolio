@@ -503,36 +503,31 @@ This step focused on **infrastructure deployment**, not tuning or detection logi
 
 ---
 
-## Step 14: SIEM Configuration & Environment Parameterization**
+## Step 14: Terraform Variable Configuration & Workspace Readiness
 
-### 🔍 Overview  
-Prepared the Sentinel deployment for scalability and real-world usage by parameterizing configuration values and reviewing deployment variables.
+🔍 Overview  
+Prepared the Terraform Cloud workspace for Sentinel deployment by configuring required variables and validating execution readiness.
 
-This step focused on **configuration readiness**, not detections or analytics.
+This step ensured the infrastructure was properly configured before running any Terraform plans or applies.
 
-### 🛠️ What I Did  
-- Reviewed Terraform configuration files:
-  - `variables.tf`
-  - `terraform.tfvars`
-- Configured environment-specific values including:
-  - Workspace naming
-  - Azure region
-  - Retention settings
-  - Pricing tiers
-- Validated configuration alignment for lab vs production-style environments  
-- Ensured Terraform variables supported future scaling and reuse  
+🛠️ What I Did  
+- Created a Terraform Cloud workspace for the Sentinel deployment  
+- Connected the workspace to the GitHub repository  
+- Configured required Terraform variables:
+  - Resource group name
+  - Log Analytics workspace name  
+- Validated variable values against the Azure subscription and environment  
+- Confirmed the workspace was ready for Terraform execution  
 
-### 📚 What I Learned  
-- Separating deployment from configuration improves scalability  
-- Parameterization enables environment reuse without code changes  
-- IaC maturity includes planning for long-term operations  
+📚 What I Learned  
+- Terraform variables define environment-specific deployment behavior  
+- Proper variable configuration is required before executing Terraform workflows  
+- Terraform Cloud centralizes and secures IaC execution  
 
-### 🧠 Skills Demonstrated  
-- Terraform variable management  
-- Environment design and scalability planning  
-- SIEM operational readiness  
-
-
+🧠 Skills Demonstrated  
+- Terraform Cloud workspace management  
+- Variable-based configuration  
+- Infrastructure deployment readiness  
 
 ---
 
