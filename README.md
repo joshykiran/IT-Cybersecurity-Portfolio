@@ -67,7 +67,6 @@ An end-to-end security project simulating how modern organizations **design, sec
 📌 **Technologies Used:**  
 Azure · Microsoft 365 · Entra ID · Intune · Defender XDR · Sentinel · Terraform · Cloudflare
 
-👉 *Full step-by-step documentation with screenshots and evidence is available in this repository.*
 
 ---
 
