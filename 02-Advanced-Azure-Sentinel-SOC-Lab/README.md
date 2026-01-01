@@ -49,7 +49,11 @@ By completing this lab, I was able to:
 - Authorized the playbook API connection for later enrichment actions  
 - Verified that incidents and training data were ingested successfully  
 
-📌 Evidence: `Evidence/Module1/`
+
+![Training Lab Deployment](./Evidence/Module1/Screenshot%20(346).png)  
+![Deployment Completed](./Evidence/Module1/Screenshot%20(352).png)  
+![Playbook API Connection Authorized](./Evidence/Module1/Screenshot%20(355).png)  
+
 
 ---
 
@@ -58,7 +62,11 @@ By completing this lab, I was able to:
 - Connected Microsoft Defender for Cloud alerts to Sentinel  
 - Enabled Microsoft Defender Threat Intelligence ingestion  
 
-📌 Evidence: `Evidence/Module2/`
+
+![Connector Installation](./Evidence/Module2/Screenshot%20(378).png)  
+![Azure Activity Connector Connected](./Evidence/Module2/Screenshot%20(383).png)  
+![Threat Intelligence Connector Enabled](./Evidence/Module2/Screenshot%20(392).png)  
+
 
 ---
 
@@ -68,7 +76,11 @@ By completing this lab, I was able to:
 - Built a custom scheduled query rule for malicious inbox rule creation  
 - Configured entity mapping (Account, Host, IP) + alert grouping  
 
-📌 Evidence: `Evidence/Module3/`
+
+![Analytics Rule Templates](./Evidence/Module3/Screenshot%20(393).png)  
+![Rule Creation Wizard](./Evidence/Module3/Screenshot%20(395).png)  
+![Custom Detection Rule + Entity Mapping](./Evidence/Module3/Screenshot%20(868).png)  
+
 
 ---
 
@@ -79,7 +91,11 @@ By completing this lab, I was able to:
 - Used workbooks to validate suspicious IP activity and confirm Red Team behavior  
 - Created a time-bound automation rule to reduce investigation noise  
 
-📌 Evidence: `Evidence/Module4/`
+
+![Incident Ownership + Status](./Evidence/Module4/Screenshot%20(870).png)  
+![Running Enrichment Playbook](./Evidence/Module4/Screenshot%20(873).png)  
+![Geo-IP Tags Added to Incident](./Evidence/Module4/Screenshot%20(874).png)  
+
 
 ---
 
@@ -88,7 +104,11 @@ By completing this lab, I was able to:
 - Bookmarked findings and added them into the incident for investigation continuity  
 - Promoted hunting results into an incident as evidence  
 
-📌 Evidence: `Evidence/Module5/`
+
+![Solorigate Hunting Query](./Evidence/Module5/Screenshot%20(896).png)  
+![Hunting Query Results](./Evidence/Module5/Screenshot%20(902).png)  
+![Bookmark Promoted to Incident](./Evidence/Module5/Screenshot%20(914).png)  
+
 
 ---
 
@@ -97,7 +117,11 @@ By completing this lab, I was able to:
 - Queried watchlist ingestion in Log Analytics  
 - Tuned an analytics rule to exclude watchlist IPs from detections  
 
-📌 Evidence: `Evidence/Module6/`
+
+![Watchlist Upload](./Evidence/Module6/Screenshot%20(918).png)  
+![Watchlist Created (Rows Loaded)](./Evidence/Module6/Screenshot%20(920).png)  
+![Analytics Rule Tuned Using Watchlist Exclusion](./Evidence/Module6/Screenshot%20(928).png)  
+
 
 ---
 
@@ -108,7 +132,11 @@ By completing this lab, I was able to:
 - Reviewed TI-based analytics rule templates and enabled applicable rules  
 - Updated the Threat Intelligence workbook by adding a custom visualization  
 
-📌 Evidence: `Evidence/Module7/`
+
+![MDTI Connector Confirmed](./Evidence/Module7/Screenshot%20(929).png)  
+![Manual IOC Added](./Evidence/Module7/Screenshot%20(934).png)  
+![Threat Intelligence Workbook Visualization](./Evidence/Module7/Screenshot%20(955).png)  
+
 
 ---
 
