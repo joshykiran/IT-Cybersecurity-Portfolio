@@ -1,9 +1,9 @@
 # Kiran Joshy — IT & Cyber Security Portfolio
 
-Aspiring **Cloud & Cybersecurity Professional** with strong hands-on experience designing, securing, monitoring, and automating Microsoft-based cloud environments.
+Aspiring **Cloud & Cybersecurity Professional** with hands-on experience designing, securing, monitoring, and automating Microsoft-based cloud environments.
 
-I focus on **practical, operations-driven security**, spanning identity protection, endpoint and email security, centralized logging, threat detection, and automated incident response.  
-My work is intentionally structured to reflect **real-world enterprise and SOC workflows**, prioritizing security fundamentals, clarity, and operational readiness over isolated lab exercises.
+I focus on **practical, operations-driven security**, spanning identity protection, endpoint and email security, centralized logging, threat detection, threat intelligence, and automated incident response.  
+My portfolio is structured to reflect **real-world enterprise and SOC workflows**, prioritizing security fundamentals, clarity, and operational readiness over isolated lab exercises.
 
 ---
 
@@ -34,21 +34,24 @@ My work is intentionally structured to reflect **real-world enterprise and SOC w
 - Microsoft Defender for Endpoint
 - Microsoft Defender for Office 365
 - Microsoft Defender for Cloud Apps (CASB)
-- Microsoft Sentinel (SIEM & SOAR)
-- KQL (Kusto Query Language) for detection and investigation
+- Microsoft Defender for Cloud
+- **Microsoft Sentinel (SIEM & SOAR)**
+- **Threat Intelligence (MDTI) + IOC lifecycle management**
+- KQL (Kusto Query Language) for detection, investigation, and hunting
 
 ### Automation & Infrastructure
 - Terraform (Infrastructure as Code)
 - GitHub-based version control
 - Terraform Cloud
 - Logic Apps & Azure Automation Runbooks
+- **Power Automate (automation fundamentals)**
 - Cloudflare DNS & Zero Trust fundamentals
 
 ---
 
-## Featured Project
+## Featured Projects
 
-### 🛡️ Cloud-Centric Security Lab with SOC Integration
+### 🛡️ Project 01 — Cloud-Centric Security Lab with SOC Integration (Zero to Hero)
 An end-to-end security project simulating how modern organizations **design, secure, monitor, and operate a cloud-based Security Operations Center (SOC)** using Microsoft security technologies.
 
 **What this project demonstrates:**
@@ -68,9 +71,29 @@ Azure · Microsoft 365 · Entra ID · Intune · Defender XDR · Sentinel · Terr
 
 ---
 
+### 🧪 Project 02 — Advanced Azure Sentinel SOC Lab (Detection + TI + Automation)
+A SOC-focused lab built to simulate realistic Sentinel workflows across **ingestion, detection engineering, investigation, hunting, allowlisting, automation, and threat intelligence operations**.
+
+**What this project demonstrates:**
+- Deployed Microsoft Sentinel Training Lab with realistic pre-ingested security data
+- Enabled and validated key data connectors (Azure Activity, Defender products, Threat Intelligence)
+- Built and tuned analytics rules (template-based + custom scheduled queries)
+- Incident triage workflows (ownership, investigation, evidence review, and closure)
+- Geo-IP enrichment playbooks + workbook-driven validation
+- Threat hunting (Solorigate) with bookmarks promoted to incident evidence
+- Watchlists for allowlisting (PenTest IPs) and rule tuning to reduce false positives
+- Threat Intelligence operations (IOC ingestion, manual IOC lifecycle, workbook enhancement)
+
+📌 **Technologies Used:**  
+Microsoft Sentinel · Log Analytics · KQL · MDTI · Playbooks · Automation Rules · Workbooks · Watchlists
+
+
+---
+
 ## Certifications & Training
 - **Red Dome IT Upskilling Programme** — 2025  
 - **Google Foundations of Cybersecurity** — 2025  
+- **Microsoft Learn — Get started with Power Automate** (Module assessment passed)  
 - **Bachelor of Commerce (Computer Application)** — 2019  
 
 ---
