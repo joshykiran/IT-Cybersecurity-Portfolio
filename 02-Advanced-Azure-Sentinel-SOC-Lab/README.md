@@ -1,4 +1,4 @@
-# 📘 Project 02 — Advanced Azure Sentinel SOC Lab (Training Modules 1–7)
+# 📘 Project 02 — Advanced Azure Sentinel SOC Lab 
 
 ---
 
