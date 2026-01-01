@@ -50,9 +50,11 @@ By completing this lab, I was able to:
 - Verified that incidents and training data were ingested successfully  
 
 
-![Training Lab Deployment](./Evidence/Module1/Screenshot%20(346).jpg)  
-![Deployment Completed](./Evidence/Module1/Screenshot%20(352).jpg)  
-![Playbook API Connection Authorized](./Evidence/Module1/Screenshot%20(355).jpg)  
+
+![Training Lab Deployment](Evidence/Screenshot%20(346).jpg)
+![Deployment Completed](Evidence/Screenshot%20(352).jpg)
+![Playbook API Connection Authorized](Evidence/Screenshot%20(355).jpg)
+
 
 
 ---
@@ -63,9 +65,11 @@ By completing this lab, I was able to:
 - Enabled Microsoft Defender Threat Intelligence ingestion  
 
 
-![Connector Installation](./Evidence/Module2/Screenshot%20(378).jpg)  
-![Azure Activity Connector Connected](./Evidence/Module2/Screenshot%20(383).jpg)  
-![Threat Intelligence Connector Enabled](./Evidence/Module2/Screenshot%20(392).jpg)  
+
+![Azure Activity Connector Enabled](Evidence/Screenshot%20(378).jpg)
+![Defender for Cloud Connected](Evidence/Screenshot%20(383).jpg)
+![Defender Threat Intelligence Ingestion Enabled](Evidence/Screenshot%20(392).jpg)
+ 
 
 
 ---
@@ -77,9 +81,11 @@ By completing this lab, I was able to:
 - Configured entity mapping (Account, Host, IP) + alert grouping  
 
 
-![Analytics Rule Templates](./Evidence/Module3/Screenshot%20(393).jpg)  
-![Rule Creation Wizard](./Evidence/Module3/Screenshot%20(395).jpg)  
-![Custom Detection Rule + Entity Mapping](./Evidence/Module3/Screenshot%20(868).jpg)  
+
+![Analytics Rule Template Enabled](Evidence/Screenshot%20(393).jpg)
+![Custom Analytics Rule Logic (KQL)](Evidence/Screenshot%20(395).jpg)
+![Rule Enabled & Validated](Evidence/Screenshot%20(868).jpg)
+
 
 
 ---
@@ -92,9 +98,10 @@ By completing this lab, I was able to:
 - Created a time-bound automation rule to reduce investigation noise  
 
 
-![Incident Ownership + Status](./Evidence/Module4/Screenshot%20(870).jpg)  
-![Running Enrichment Playbook](./Evidence/Module4/Screenshot%20(873).j[g)  
-![Geo-IP Tags Added to Incident](./Evidence/Module4/Screenshot%20(874).jpg)  
+![Incident Ownership & Status](Evidence/Screenshot%20(869).jpg)
+![Geo-IP Enrichment Playbook Result](Evidence/Screenshot%20(870).jpg)
+![Investigation Workbook Validation](Evidence/Screenshot%20(873).jpg)
+
 
 
 ---
@@ -105,9 +112,11 @@ By completing this lab, I was able to:
 - Promoted hunting results into an incident as evidence  
 
 
-![Solorigate Hunting Query](./Evidence/Module5/Screenshot%20(896).jpg)  
-![Hunting Query Results](./Evidence/Module5/Screenshot%20(902).jpg)  
-![Bookmark Promoted to Incident](./Evidence/Module5/Screenshot%20(914).jpg)  
+
+![Solorigate Hunting Query Results](Evidence/Screenshot%20(874).jpg)
+![Bookmark Created](Evidence/Screenshot%20(892).jpg)
+![Bookmark Added as Incident Evidence](Evidence/Screenshot%20(902).jpg)
+ 
 
 
 ---
@@ -118,9 +127,11 @@ By completing this lab, I was able to:
 - Tuned an analytics rule to exclude watchlist IPs from detections  
 
 
-![Watchlist Upload](./Evidence/Module6/Screenshot%20(918).jpg)  
-![Watchlist Created (Rows Loaded)](./Evidence/Module6/Screenshot%20(920).jpg)  
-![Analytics Rule Tuned Using Watchlist Exclusion](./Evidence/Module6/Screenshot%20(928).jpg)  
+
+![Watchlist Created (PenTest IPs)](Evidence/Screenshot%20(914).jpg)
+![Watchlist Items Loaded](Evidence/Screenshot%20(918).jpg)
+![Analytics Rule Tuned to Exclude Watchlist](Evidence/Screenshot%20(930).jpg)
+  
 
 
 ---
@@ -133,9 +144,10 @@ By completing this lab, I was able to:
 - Updated the Threat Intelligence workbook by adding a custom visualization  
 
 
-![MDTI Connector Confirmed](./Evidence/Module7/Screenshot%20(929).jpg)  
-![Manual IOC Added](./Evidence/Module7/Screenshot%20(934).jpg)  
-![Threat Intelligence Workbook Visualization](./Evidence/Module7/Screenshot%20(955).jpg)  
+
+![ThreatIntelIndicators Table Validated](Evidence/Screenshot%20(952).jpg)
+![Manual IOC Added (New TI Object)](Evidence/Screenshot%20(955).jpg)
+![Threat Intelligence Workbook Visualization](Evidence/Screenshot%20(971).jpg)
 
 
 ---
