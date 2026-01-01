@@ -1,4 +1,4 @@
-# 📘 Project 02 — Advanced Azure Sentinel SOC Lab 
+# 📘 Project 02 — Advanced Azure Sentinel SOC Lab
 
 ---
 
@@ -14,7 +14,6 @@ The lab was designed to reflect how SOC analysts work in production environments
 - Preserving investigation findings using hunting + bookmarks  
 - Reducing alert noise using watchlists (allowlisting)  
 - Managing IOC lifecycle using Threat Intelligence  
-
 
 ---
 
@@ -94,7 +93,7 @@ By completing this lab, I was able to:
 ---
 
 ### ✅ Module 6 — Watchlists for Noise Reduction (PenTest IP Allowlisting)
-- Created a watchlist from PenTestsIPaddresses.csv  
+- Created a watchlist from `PenTestsIPaddresses.csv`  
 - Queried watchlist ingestion in Log Analytics  
 - Tuned an analytics rule to exclude watchlist IPs from detections  
 
