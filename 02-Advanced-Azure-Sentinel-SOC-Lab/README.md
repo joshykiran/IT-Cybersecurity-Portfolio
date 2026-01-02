@@ -94,18 +94,18 @@ By completing this lab, I was able to:
 ---
 
 ### ✅ Module 4 — Incident Investigation, Enrichment & Allowlisting
-- Reviewed incident queues and SOC health using the **Incidents page** and the **Security Efficiency workbook**  
-- Took ownership of incidents and managed lifecycle status (**New → Active → Closed**) with proper classification  
-- Investigated raw evidence using the **Incident Timeline → Link to Log Analytics**, reviewing event fields directly within the incident context  
-- Ran the **Get-GeoFromIpAndTagIncident** playbook to enrich the incident and apply geographic tagging  
-- Used the **Investigation Insights workbook** (Entity-based view) to validate suspicious IP activity and confirm Red Team behavior  
-- Created a **time-bound automation rule** (48-hour expiration) using incident identifiers to reduce noise during the Red Team exercise  
+### ✅ Module 4 — Incident Investigation, Enrichment & Allowlisting
+- Took ownership of incidents and managed lifecycle (New → Active → Closed)
+- Investigated alert evidence using incident timeline + **Link to Log Analytics**
+- Executed **Geo-IP enrichment playbook** and validated incident tagging
+- Used **Security Efficiency** and **Investigation Insights** workbooks to pivot on suspicious IP activity and confirm Red Team behavior
+- Created a **time-bound automation rule** to reduce alert fatigue (temporary allowlisting / auto-close logic)
 - Triaged a **Solorigate Network Beacon** incident by reviewing IOC context, hunting for additional affected hosts, bookmarking findings, and preparing the incident for handover with documented comments  
 
 
-![Incident Ownership & Status](Evidence/Screenshot%20(869).jpg)
-![Geo-IP Enrichment Playbook Result](Evidence/Screenshot%20(870).jpg)
-![Investigation Workbook Validation](Evidence/Screenshot%20(873).jpg)
+![Incident Ownership & Status](Evidence/Screenshot%20(864).png)
+![Geo-IP Enrichment Playbook Result](Evidence/Screenshot%20(870).png)
+![Investigation Workbook Validation](Evidence/Screenshot%20(907).png)
 
 
 
