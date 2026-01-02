@@ -123,7 +123,7 @@ By completing this lab, I was able to:
 
 
 ![Solorigate Hunting Query Results](Evidence/Screenshot%20(918).jpg)
-![Bookmark Added as Incident Evidence](Evidence/Screenshot%20(921).jpg)
+![Bookmark Added as Incident Evidence](Evidence/Screenshot%20(921).png)
 ![Bookmark Added as Incident Evidence](Evidence/Screenshot%20(934).jpg)
  
 
