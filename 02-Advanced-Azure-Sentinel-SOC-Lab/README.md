@@ -66,9 +66,9 @@ By completing this lab, I was able to:
 
 
 
-![Azure Activity Connector Enabled](Evidence/Screenshot%20(378).jpg)
-![Defender for Cloud Connected](Evidence/Screenshot%20(383).jpg)
-![Defender Threat Intelligence Ingestion Enabled](Evidence/Screenshot%20(392).jpg)
+
+![Defender for Cloud Connected](Evidence/Screenshot%20(564).png)
+![Defender Threat Intelligence Ingestion Enabled](Evidence/Screenshot%20(579).png)
  
 
 
