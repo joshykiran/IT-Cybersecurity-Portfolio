@@ -1,9 +1,9 @@
-# Kiran Joshy — IT & Cyber Security Portfolio
+# Kiran Joshy — IT & Cybersecurity Portfolio
 
 Aspiring **Cloud & Cybersecurity Professional** with hands-on experience designing, securing, monitoring, and automating Microsoft-based cloud environments.
 
-I focus on **practical, operations-driven security**, spanning identity protection, endpoint and email security, centralized logging, threat detection, threat intelligence, and automated incident response.  
-My portfolio is structured to reflect **real-world enterprise and SOC workflows**, prioritizing security fundamentals, clarity, and operational readiness over isolated lab exercises.
+I focus on **operations-driven security** across identity protection, endpoint and email security, centralized logging, detection engineering, threat intelligence, and automated incident response.  
+This portfolio is structured to reflect **real-world enterprise and SOC workflows**, emphasizing practical implementation, strong security fundamentals, and operational readiness.
 
 ---
 
@@ -22,7 +22,7 @@ My portfolio is structured to reflect **real-world enterprise and SOC workflows*
 - Microsoft Azure
 - Microsoft Entra ID (Azure AD)
 - Conditional Access & Zero Trust
-- MFA, identity governance, and RBAC
+- MFA, Identity Governance, and RBAC
 
 ### Endpoint & Device Security
 - Microsoft Intune (Windows & Android)
@@ -37,7 +37,7 @@ My portfolio is structured to reflect **real-world enterprise and SOC workflows*
 - Microsoft Defender for Cloud
 - **Microsoft Sentinel (SIEM & SOAR)**
 - **Threat Intelligence (MDTI) + IOC lifecycle management**
-- KQL (Kusto Query Language) for detection, investigation, and hunting
+- KQL (Kusto Query Language) for detection, investigation, and threat hunting
 
 ### Automation & Infrastructure
 - Terraform (Infrastructure as Code)
@@ -55,37 +55,35 @@ My portfolio is structured to reflect **real-world enterprise and SOC workflows*
 An end-to-end security project simulating how modern organizations **design, secure, monitor, and operate a cloud-based Security Operations Center (SOC)** using Microsoft security technologies.
 
 **What this project demonstrates:**
-- Secure Microsoft 365 tenant and identity foundation
-- Identity-first access enforcement using Conditional Access and MFA
-- Endpoint and mobile device protection via Intune and Defender
-- Centralized logging and visibility using Microsoft Sentinel
-- Detection and investigation of real-world **RDP brute-force attacks**
-- GeoIP enrichment and global attack visualization
-- Automated incident response using SOAR (Logic Apps & Runbooks)
-- Infrastructure provisioning and deployment using Terraform (IaC)
+- Built a secure Microsoft 365 tenant and identity foundation
+- Enforced identity-first access controls using Conditional Access and MFA
+- Implemented endpoint and mobile protection using Intune and Microsoft Defender
+- Centralized logging and detection using Microsoft Sentinel
+- Investigated and analyzed real-world **RDP brute-force attack telemetry**
+- Enhanced incident context using GeoIP enrichment and attack visualization
+- Automated response workflows using SOAR (Logic Apps & Runbooks)
+- Provisioned and deployed infrastructure using Terraform (IaC)
 
 📌 **Technologies Used:**  
 Azure · Microsoft 365 · Entra ID · Intune · Defender XDR · Sentinel · Terraform · Cloudflare
 
-
 ---
 
-### 🧪 Project 02 — Advanced Azure Sentinel SOC Lab (Detection + TI + Automation)
-A SOC-focused lab built to simulate realistic Sentinel workflows across **ingestion, detection engineering, investigation, hunting, allowlisting, automation, and threat intelligence operations**.
+### 🧪 Project 02 — Advanced Microsoft Sentinel SOC Lab (Detection + TI + Automation)
+A SOC-focused lab simulating realistic Microsoft Sentinel workflows across **ingestion, detection engineering, investigation, hunting, allowlisting, automation, and threat intelligence operations**.
 
 **What this project demonstrates:**
 - Deployed Microsoft Sentinel Training Lab with realistic pre-ingested security data
-- Enabled and validated key data connectors (Azure Activity, Defender products, Threat Intelligence)
-- Built and tuned analytics rules (template-based + custom scheduled queries)
-- Incident triage workflows (ownership, investigation, evidence review, and closure)
-- Geo-IP enrichment playbooks + workbook-driven validation
-- Threat hunting (Solorigate) with bookmarks promoted to incident evidence
-- Watchlists for allowlisting (PenTest IPs) and rule tuning to reduce false positives
-- Threat Intelligence operations (IOC ingestion, manual IOC lifecycle, workbook enhancement)
+- Enabled and validated key connectors (Azure Activity, Defender products, Threat Intelligence)
+- Built and tuned analytics rules (template-based + custom scheduled query detections)
+- Executed incident triage workflows (ownership, investigation, evidence review, closure)
+- Enriched incidents using playbooks and workbook-driven investigation
+- Performed threat hunting (Solorigate) and promoted bookmarks into incident evidence
+- Reduced false positives using watchlists (PenTest IP allowlisting) and rule tuning
+- Managed Threat Intelligence workflows (IOC ingestion, manual IOC lifecycle, workbook enhancement)
 
 📌 **Technologies Used:**  
 Microsoft Sentinel · Log Analytics · KQL · MDTI · Playbooks · Automation Rules · Workbooks · Watchlists
-
 
 ---
 
@@ -98,7 +96,7 @@ Microsoft Sentinel · Log Analytics · KQL · MDTI · Playbooks · Automation Ru
 ---
 
 ## Career Objective
-Seeking **SOC Analyst**, **Cloud Security**, or **Junior Security Engineer** roles where I can apply hands-on security operations experience, deepen my technical expertise, and contribute to protecting modern cloud environments.
+Seeking **SOC Analyst**, **Cloud Security**, or **Junior Security Engineer** roles where I can apply hands-on security operations experience, expand my technical expertise, and contribute to securing modern cloud environments.
 
 ---
 
