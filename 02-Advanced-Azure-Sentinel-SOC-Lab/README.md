@@ -68,7 +68,7 @@ By completing this lab, I was able to:
 
 
 ![Defender for Cloud Connected](Evidence/Screenshot%20(564).png)
-![Defender Threat Intelligence Ingestion Enabled](Evidence/Screenshot%20(579).png)
+![Defender Threat Intelligence Ingestion Enabled](Evidence/Screenshot%20(565).png)
  
 
 
