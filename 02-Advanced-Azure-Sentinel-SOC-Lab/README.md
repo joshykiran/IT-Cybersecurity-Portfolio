@@ -111,49 +111,53 @@ By completing this lab, I was able to:
 
 ---
 
-### ✅ Module 5 — Threat Hunting + Bookmarks → Incident Evidence
-- Ran the Solorigate inventory hunting query  
-- Bookmarked findings and added them into the incident for investigation continuity  
-- Promoted hunting results into an incident as evidence  
+### ✅ Module 5 — Proactive Threat Hunting + Watchlist Correlation + Bookmarks
+- Performed MITRE technique-based hunting by filtering queries for **T1098 (Account Manipulation)**
+- Ran selected hunting queries in batch and reviewed results for suspicious OAuth credential activity
+- Created a **HighRiskApps watchlist** (CSV import) to support risk-based validation of hunting results
+- Validated watchlist ingestion using `_GetWatchlist()` and schema checks in Log Analytics
+- Correlated hunting results with watchlist data using a **KQL join** to identify **high-risk OAuth applications**
+- Bookmarked suspicious results with **entity mapping (Account + IP)** and applied investigation tags
+- Verified bookmarks in Sentinel and preserved findings for future investigation / incident escalation
 
 
 
-![Solorigate Hunting Query Results](Evidence/Screenshot%20(874).jpg)
-![Bookmark Created](Evidence/Screenshot%20(892).jpg)
-![Bookmark Added as Incident Evidence](Evidence/Screenshot%20(902).jpg)
+![Solorigate Hunting Query Results](Evidence/Screenshot%20(918).jpg)
+![Bookmark Created](Evidence/Screenshot%20(921).jpg)
+![Bookmark Added as Incident Evidence](Evidence/Screenshot%20(934).jpg)
  
 
 
 ---
 
 ### ✅ Module 6 — Watchlists for Noise Reduction (PenTest IP Allowlisting)
-- Created a watchlist from `PenTestsIPaddresses.csv`  
-- Queried watchlist ingestion in Log Analytics  
-- Tuned an analytics rule to exclude watchlist IPs from detections  
+- Created a **PenTestsIPaddresses** watchlist by importing `PenTestsIPaddresses.csv` (SearchKey: `IPAddress`)  
+- Verified watchlist ingestion in **Log Analytics** using `_GetWatchlist('PenTestIPaddresses')`  
+- Installed the **“High count of connections by client IP on many ports”** analytic rule from **Content hub**  
+- Tuned the scheduled analytics rule query to **exclude PenTest IPs** using watchlist correlation (`cIP !in (PenTestIPaddresses)`) to reduce false positives / investigation noise  
+- Saved and enabled the modified scheduled analytic rule after successful validation  
 
 
-
-![Watchlist Created (PenTest IPs)](Evidence/Screenshot%20(914).jpg)
-![Watchlist Items Loaded](Evidence/Screenshot%20(918).jpg)
-![Analytics Rule Tuned to Exclude Watchlist](Evidence/Screenshot%20(930).jpg)
+![Watchlist Created (PenTest IPs)](Evidence/Screenshot%20(945).png)
+![Watchlist Items Loaded](Evidence/Screenshot%20(944).png)
+![Analytics Rule Tuned to Exclude Watchlist](Evidence/Screenshot%20(947).png)
   
 
 
 ---
 
-### ✅ Module 7 — Threat Intelligence Operations + Workbook Enhancements
-- Validated indicator ingestion into the `ThreatIntelIndicators` table  
-- Reviewed IOC metadata inside Threat Intelligence menu  
-- Added and removed a manual IOC (URL) to understand lifecycle management  
-- Reviewed TI-based analytics rule templates and enabled applicable rules  
-- Updated the Threat Intelligence workbook by adding a custom visualization  
+### ✅ Module 7 — Threat Intelligence (TI) Integration & Workflow
+- Confirmed **Microsoft Defender Threat Intelligence (MDTI)** data connector status and verified ongoing IOC ingestion  
+- Explored the **Threat Intelligence** blade to review IOC metadata (type, source, confidence, tags, validity)  
+- Created a **manual IOC (URL: `http://phishing.com`)**, tagged it (Incident reference), verified it was written to Log Analytics, and removed it to understand IOC lifecycle management  
+- Reviewed **Threat Intelligence analytics rule templates** and enabled applicable correlation rules for ingested TI sources  
+- Opened and customized the **Threat Intelligence workbook**, validating TI table availability and adding a custom visualization for better IOC insights  
 
 
 
-![ThreatIntelIndicators Table Validated](Evidence/Screenshot%20(952).jpg)
-![Manual IOC Added (New TI Object)](Evidence/Screenshot%20(955).jpg)
-![Threat Intelligence Workbook Visualization](Evidence/Screenshot%20(971).jpg)
-
+![ThreatIntelIndicators Table Validated](Evidence/Screenshot%20(959).jpg)
+![Manual IOC Added (New TI Object)](Evidence/Screenshot%20(951).png)
+![Threat Intelligence Workbook Visualization](Evidence/Screenshot%20(963).jpg)
 
 ---
 
