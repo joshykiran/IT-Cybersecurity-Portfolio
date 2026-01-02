@@ -75,16 +75,19 @@ By completing this lab, I was able to:
 ---
 
 ### ✅ Module 3 — Analytics Rules & Detection Engineering
-- Enabled rule templates (Suspicious Resource Deployment)  
-- Created Microsoft incident creation rule (Defender for Cloud: Medium + High)  
-- Built a custom scheduled query rule for malicious inbox rule creation  
-- Configured entity mapping (Account, Host, IP) + alert grouping  
+- Reviewed Analytics **Rule Templates** and filtered by **Azure Activity** to evaluate available detection content  
+- Enabled the template rule **Suspicious Resource Deployment** (Azure Activity) with default parameters  
+- Created a **Microsoft Incident Creation Rule** for **Defender for Cloud**, filtering only **Medium + High** severity alerts to reduce alert fatigue  
+- Reviewed the built-in **Fusion (Multistage Attack Detection)** rule and its connected data sources (enabled by default)  
+- Built a custom **Scheduled Query Analytics Rule** to detect **malicious inbox rule creation** using `OfficeActivity_CL` logs  
+- Validated log coverage by confirming **New-InboxRule** events were ingested (`OfficeActivity_CL | distinct Operation_s`)  
+- Configured detection enhancements: **Entity mapping (Account, Host, IP)**, **custom alert title formatting**, and **alert grouping into incidents (Account-based)**  
+- Verified results by reviewing a generated incident and pivoting through the **Entities** tab for investigation context  
 
 
 
-![Analytics Rule Template Enabled](Evidence/Screenshot%20(393).jpg)
-![Custom Analytics Rule Logic (KQL)](Evidence/Screenshot%20(395).jpg)
-![Rule Enabled & Validated](Evidence/Screenshot%20(868).jpg)
+![Analytics Rule Template Enabled](Evidence/Screenshot%20(384).png)
+![Custom Analytics Rule Logic (KQL)](Evidence/Screenshot%20(386).png)
 
 
 
