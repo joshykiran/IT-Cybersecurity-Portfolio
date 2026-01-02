@@ -1,34 +1,36 @@
-# 📘 Project 02 — Advanced Azure Sentinel SOC Lab
+# 📘 Project 02 — Advanced Microsoft Sentinel SOC Lab
 
 ---
 
 ## Project Overview
 
-This project documents my hands-on experience using **Microsoft Sentinel** to simulate real SOC workflows across detection, incident investigation, enrichment, threat hunting, watchlists, and threat intelligence.
+This project documents my end-to-end, hands-on experience using **Microsoft Sentinel** to simulate real-world SOC operations.  
+Across seven modules, I worked through the complete SOC workflow lifecycle — from onboarding data sources and building detections, to investigating incidents, enriching alerts, hunting threats, tuning noise, and managing threat intelligence.
 
-The lab was designed to reflect how SOC analysts work in production environments:
+The lab environment is designed to reflect how SOC analysts operate in production:
 
-- Ingesting security signals from multiple sources  
-- Creating and tuning detection rules  
-- Investigating incidents using entities, logs, and workbooks  
-- Preserving investigation findings using hunting + bookmarks  
-- Reducing alert noise using watchlists (allowlisting)  
-- Managing IOC lifecycle using Threat Intelligence  
+- Ingesting security telemetry from multiple Microsoft and Azure sources  
+- Designing and tuning analytics rules to generate high-fidelity alerts  
+- Investigating incidents through entities, timelines, and log pivots  
+- Enriching incidents using workbooks and automation (playbooks + rules)  
+- Preserving investigation outcomes via hunting queries and bookmarks  
+- Reducing false positives using watchlists and allowlisting techniques  
+- Managing IOC lifecycle and leveraging Threat Intelligence for detection and investigation  
 
 ---
 
 ## Key Outcomes
 
-By completing this lab, I was able to:
+By completing this project, I was able to:
 
-- Deploy a Sentinel training environment with realistic pre-ingested security data  
-- Enable and validate key Sentinel data connectors (Azure Activity, Defender products, Threat Intelligence)  
-- Create analytics rules (template-based + custom scheduled query detection)  
-- Perform incident triage: assign ownership, change status, investigate evidence, and close with classification  
-- Enrich incidents using playbooks (Geo-IP tagging) and investigation workbooks  
-- Hunt for additional threats and promote findings into incidents using bookmarks  
-- Create a watchlist of penetration test IPs and tune analytics rules to reduce false positives  
-- Explore and manage Threat Intelligence indicators and enhance TI visualization using workbooks  
+- Deploy a fully functional Sentinel training workspace with realistic pre-ingested data  
+- Configure and validate multiple data connectors including Azure Activity, Defender products, and Threat Intelligence  
+- Enable built-in analytics rules and create custom scheduled query detections using KQL  
+- Perform incident triage and full lifecycle management (assign → investigate → close with classification)  
+- Enrich investigations using playbooks (Geo-IP tagging) and investigation workbooks  
+- Perform proactive threat hunting and promote findings into incidents using bookmarks  
+- Create and operationalize watchlists (allowlisting + correlation) to reduce alert noise  
+- Explore and manage IOC metadata and enhance Threat Intelligence visibility using workbooks  
 
 ---
 
@@ -38,8 +40,11 @@ By completing this lab, I was able to:
 - **Query Language:** KQL (Kusto Query Language)  
 - **Threat Intelligence:** Microsoft Defender Threat Intelligence (MDTI)  
 - **Automation:** Playbooks + Automation Rules  
-- **SOC Investigation Tools:** Incidents, Entities, Workbooks, Hunting, Bookmarks  
-- **Azure Platform:** Azure Portal + Log Analytics Workspace  
+- **SOC Capabilities:** Incidents, Entities, Workbooks, Hunting, Bookmarks, Watchlists  
+- **Platform:** Azure Portal + Log Analytics Workspace  
+
+---
+
 
 ---
 
@@ -163,15 +168,18 @@ By completing this lab, I was able to:
 
 ## Project Summary
 
-This project demonstrates SOC-ready capability using Microsoft Sentinel — covering ingestion, detection engineering, investigation, enrichment, hunting, allowlisting, and threat intelligence workflows.
+This project demonstrates SOC-ready capability using **Microsoft Sentinel**, covering the full operational cycle: ingestion, detection engineering, incident investigation, enrichment, threat hunting, noise reduction, and threat intelligence management.
 
-It reflects practical skills aligned with:
+Through this lab, I gained practical exposure to workflows that closely mirror real production SOC environments, including:
 
-✅ SOC incident investigation and closure discipline  
-✅ KQL querying and detection tuning  
-✅ Threat hunting and evidence preservation  
-✅ Automation rules and playbook-based enrichment  
-✅ Watchlists for false positive reduction  
-✅ IOC management and TI visualization  
+✅ Connector onboarding and validation across Azure + Defender data sources  
+✅ Analytics rule enablement and custom detection development using KQL  
+✅ Structured incident triage, investigation, and closure discipline  
+✅ Automated enrichment using playbooks and workbook-driven investigation  
+✅ Threat hunting, entity mapping, and evidence preservation using bookmarks  
+✅ Watchlist-based allowlisting and rule tuning to reduce false positives  
+✅ IOC lifecycle management and Threat Intelligence visualization for improved detection context  
+
+Overall, this lab strengthened my ability to operate within Microsoft Sentinel as a SOC Analyst — combining technical investigation skills with practical detection tuning and operational workflow management.
 
 ---
