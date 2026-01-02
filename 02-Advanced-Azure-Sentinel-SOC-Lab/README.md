@@ -94,13 +94,13 @@ By completing this lab, I was able to:
 ---
 
 ### ✅ Module 4 — Incident Investigation, Enrichment & Allowlisting
-### ✅ Module 4 — Incident Investigation, Enrichment & Allowlisting
-- Took ownership of incidents and managed lifecycle (New → Active → Closed)
-- Investigated alert evidence using incident timeline + **Link to Log Analytics**
-- Executed **Geo-IP enrichment playbook** and validated incident tagging
-- Used **Security Efficiency** and **Investigation Insights** workbooks to pivot on suspicious IP activity and confirm Red Team behavior
-- Created a **time-bound automation rule** to reduce alert fatigue (temporary allowlisting / auto-close logic)
-- Triaged a **Solorigate Network Beacon** incident by reviewing IOC context, hunting for additional affected hosts, bookmarking findings, and preparing the incident for handover with documented comments  
+- Took ownership of incidents and managed lifecycle (New → Active → Closed)  
+- Investigated alert evidence using the incident timeline and **Link to Log Analytics** for raw event review  
+- Executed a Geo-IP enrichment playbook and verified automated incident tagging (e.g., location-based tags)  
+- Used **Security Efficiency** and **Investigation Insights** workbooks to pivot on suspicious IP activity and confirm Red Team behavior  
+- Created a time-bound automation rule to reduce alert fatigue (temporary allowlisting / auto-close workflow)  
+- Triaged a **Solorigate Network Beacon** incident by validating IOC context, pivoting through entities (host/IP/DNS), hunting for additional impacted hosts, bookmarking findings, and documenting actions for incident handover  
+
 
 
 ![Incident Ownership & Status](Evidence/Screenshot%20(864).png)
